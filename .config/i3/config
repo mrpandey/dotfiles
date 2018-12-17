@@ -170,14 +170,12 @@ bar {
 }
 
 
-
-
-# Now begins my customizations
+# CUSTOM ONES BELOW
 
 title_align center
-
 default_border none
 default_floating_border none
+client.focused #666666 #455a64 #ffffff #607d8b #455a64
 
 # assign application to workspaces
 
@@ -204,7 +202,6 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20
 # decrease
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20
-
 
 
 # smart gaps enabled means gaps aren't applied for single container
