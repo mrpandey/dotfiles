@@ -1,0 +1,21 @@
+rofi.modi: drun,window
+rofi.lines: 16
+rofi.columns: 1
+rofi.width: 33
+rofi.drun-icon-theme: Paper
+rofi.show-icons: true
+rofi.sidebar-mode: true
+rofi.m: -4
+rofi.font: UbuntuMono Nerd Font 11
+rofi.location: 7
+rofi.yoffset: -22
+rofi.padding: 10
+rofi.line-padding: 3
+rofi.scrollbar-width: 5
+rofi.hide-scrollbar: true
+
+rofi.color-enabled: true
+rofi.color-window: #000a0a, #000a0a, #000a0a
+rofi.color-normal: #000a0a, #A69585, #000a0a, #000a0a, #FF5050
+rofi.color-active: #000a0a, #b48ead, #000a0a, #000a0a, #93e5cc
+rofi.color-urgent: #000a0a, #ebcb8b, #000a0a, #000a0a, #ebcb8b
