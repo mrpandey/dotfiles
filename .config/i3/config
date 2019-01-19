@@ -183,7 +183,13 @@ bindsym $mod+r mode "resize"
 title_align center
 default_border none
 default_floating_border none
+
+# default container layout
 workspace_layout tabbed
+
+# default container layout for ws1
+for_window [workspace=$ws1] layout splith
+
 client.focused #666666 #455a64 #ffffff #607d8b #455a64
 
 # assign application to workspaces
