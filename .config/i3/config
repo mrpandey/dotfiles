@@ -152,16 +152,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 10 px or 2 ppt
+        bindsym k resize grow height 10 px or 2 ppt
+        bindsym l resize shrink height 10 px or 2 ppt
+        bindsym semicolon resize grow width 10 px or 2 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 10 px or 2 ppt
+        bindsym Down resize grow height 10 px or 2 ppt
+        bindsym Up resize shrink height 10 px or 2 ppt
+        bindsym Right resize grow width 10 px or 2 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -207,10 +207,15 @@ assign [class="pdf|libreoffice"] 6
 
 # increase vol
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+
 # decrease vol
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+
 # mute
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+
+# full screenshot
+bindsym Print exec xfce4-screenshooter -f
 
 # Sreen brightness controls
 # increase
