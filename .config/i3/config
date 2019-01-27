@@ -199,7 +199,11 @@ assign [class="Firefox|Google-chrome"] 2
 assign [class="Thunar"] 3
 assign [class="Sublime|Atom|Code"] 4
 assign [class="Rhythmbox|mpv|vlc"] 5
-assign [class="pdf|libreoffice"] 6
+
+# For some reasons xprop shows LO writer's class as "libreoffice-writer"
+# but i3 assign works instead for class="Soffice".
+# Therefore, using "office" substring as class to match them all
+assign [class="pdf|office"] 6
 
 
 # Pulse Audio controls
