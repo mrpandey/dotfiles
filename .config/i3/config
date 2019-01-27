@@ -195,7 +195,7 @@ client.focused #666666 #455a64 #ffffff #607d8b #455a64
 # assign application to workspaces
 
 assign [class="Tilix"] 1
-assign [class="Firefox"] 2
+assign [class="Firefox|Google-chrome"] 2
 assign [class="Thunar"] 3
 assign [class="Sublime|Atom|Code"] 4
 assign [class="Rhythmbox|mpv|vlc"] 5
