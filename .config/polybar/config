@@ -19,13 +19,16 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #000a0a
-background-alt = #ce6520
+;background-alt = #ce6520
+background-alt = #389f38
 ;foreground = ${xrdb:color7:#222}
 foreground = #fff
 foreground-alt = #888
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
+bar-icons = #689f38
+bar-icons-off = #f55
 
 [bar/bar1]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -217,14 +220,15 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-foreground = #f4f
+format-foreground = ${colors.bar-icons}
 label =  %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-foreground = #aaa
+format-foreground = ${colors.bar-icons}
 label =  %percentage_used%%
+;label =  %percentage_used%%
 
 [module/wlan]
 type = internal/network
@@ -289,10 +293,10 @@ type = internal/pulseaudio
 
 format-volume = <label-volume>
 label-volume =  %percentage%%
-label-volume-foreground = #3a3
+label-volume-foreground = ${colors.bar-icons}
 
 label-muted = 
-label-muted-foreground = #3a3
+label-muted-foreground = ${colors.bar-icons-off}
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -351,12 +355,12 @@ format-charging-foreground = #cc0
 label-charging =   %percentage%%
 
 format-discharging = <label-discharging>
-format-discharging-foreground = #f55
+format-discharging-foreground = ${colors.bar-icons-off}
 label-discharging =  %percentage%%
 
 format-full = <label-full>
 format-full-prefix = " "
-format-full-foreground = #689f38
+format-full-foreground = ${colors.bar-icons}
 
 ramp-capacity-0 = ""
 ramp-capacity-1 = ""
@@ -377,10 +381,10 @@ warn-temperature = 60
 format = <label>
 format-warn = <label-warn>
 
-label =  %temperature-c%
-label-foreground = #0af
+label =  %temperature-c%
+label-foreground = ${colors.bar-icons}
 label-warn =  %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = ${colors.bar-icons-off}
 
 ramp-0 = 
 ramp-1 = 
