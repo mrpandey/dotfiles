@@ -55,9 +55,9 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = "Monospace:pixelsize=9:antialias=true;3"
-font-1 = unifont:fontformat=truetype:size=10:antialias=true;0
-font-2 = "UbuntuMono Nerd Font:pixelsize=11;3"
+font-0 = "UbuntuMono Nerd Font:pixelsize=10:antialias=true;3"
+font-1 = "InconsolataGo Nerd Font:pixelsize=10:antialias=true;3"
+font-2 = "Monospace:pixelsize=9:antialias=true;0"
 
 modules-left = i3
 modules-center = 
