@@ -34,6 +34,7 @@
         <value type="int" value="9"/>
         <value type="int" value="10"/>
         <value type="int" value="11"/>
+        <value type="int" value="4"/>
         <value type="int" value="6"/>
       </property>
       <property name="position" type="string" value="p=8;x=683;y=754"/>
@@ -135,6 +136,10 @@
     <property name="plugin-14" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
       <property name="expand" type="bool" value="false"/>
+    </property>
+    <property name="plugin-4" type="string" value="separator">
+      <property name="expand" type="bool" value="false"/>
+      <property name="style" type="uint" value="0"/>
     </property>
   </property>
 </channel>
