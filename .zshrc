@@ -2,22 +2,23 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/mrpandey/.oh-my-zsh
+  export ZSH="/home/mrpandey/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # default "robbyrussell"
-# select from bira, af-magic, agnoster, avit, geoffgarside, ys
-# cutom ones: xxf, geometry/geometry, oxide, aphrodite
-ZSH_THEME="random"
+# select from avit
+# cutom ones: oxide
+ZSH_THEME="../custom/themes/oxide"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
 # looking in ~/.oh-my-zsh/themes/
 # An empty array have no effect
-ZSH_THEME_RANDOM_CANDIDATES=( "../custom/themes/xxf" "../custom/themes/geometry/geometry" "avit" "../custom/themes/oxide" "af-magic" "../custom/themes/aphrodite" )
+# When using random themes, comment out that echo line in oh-my-zsh.sh
+#ZSH_THEME_RANDOM_CANDIDATES=( "avit" "../custom/themes/oxide" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -99,5 +100,5 @@ source $ZSH/oh-my-zsh.sh
 # run vte (for tilix)
 # vte.sh is symlink to vte-2.9.sh and should exist
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
+        source /etc/profile.d/vte-2.91.sh
 fi
