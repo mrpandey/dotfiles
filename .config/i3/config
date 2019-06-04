@@ -203,7 +203,7 @@ assign [class="Rhythmbox|mpv|vlc"] 5
 # For some reasons xprop shows LO writer's class as "libreoffice-writer"
 # but i3 assign works instead for class="Soffice".
 # Therefore, using "office" substring as class to match them all
-assign [class="pdf|office"] 6
+assign [class="pdf|Atril|office"] 6
 
 
 # Pulse Audio controls
@@ -223,9 +223,9 @@ bindsym Print exec xfce4-screenshooter -f
 
 # Sreen brightness controls
 # increase
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+bindsym XF86MonBrightnessUp exec light -A 5
 # decrease
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+bindsym XF86MonBrightnessDown exec light -U 5
 
 
 # smart gaps enabled means gaps aren't applied for single container
