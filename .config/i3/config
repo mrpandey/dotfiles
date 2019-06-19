@@ -221,7 +221,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # full screenshot
 bindsym Print exec xfce4-screenshooter -f
 
-# Sreen brightness controls
+# Sreen brightness controls using light v1.1.2
 # increase
 bindsym XF86MonBrightnessUp exec light -A 5
 # decrease
