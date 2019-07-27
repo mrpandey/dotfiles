@@ -61,7 +61,7 @@ font-2 = "Monospace:pixelsize=9:antialias=true;0"
 
 modules-left = i3
 modules-center = 
-modules-right = xbacklight memory cpu wlan eth pulseaudio battery date powermenu
+modules-right = eth wlan memory cpu pulseaudio battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -233,11 +233,11 @@ label =  %percentage_used%%
 [module/wlan]
 type = internal/network
 interface = wlp6s0
-interval = 3.0
+interval = 1.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
-label-connected = %essid%
+label-connected = %essid%  %upspeed%  %downspeed%
 label-connected-foreground = ${colors.bar-icons}
 
 format-disconnected =
@@ -256,12 +256,12 @@ ramp-signal-foreground = ${colors.bar-icons}
 [module/eth]
 type = internal/network
 interface = enp7s0
-interval = 3.0
+interval = 1.0
 
 format-connected-underline = #55aa55
 format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+format-connected-foreground = ${colors.bar-icons}
+label-connected =  %upspeed%  %downspeed%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
