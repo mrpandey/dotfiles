@@ -412,6 +412,8 @@ menu-0-1 = 
 menu-0-1-exec = systemctl reboot
 menu-0-2 = 
 menu-0-2-exec = systemctl poweroff
+menu-0-3 = 
+menu-0-3-exec = i3lock -i ~/.config/i3/lock_1366x768.png
 
 [settings]
 screenchange-reload = true
