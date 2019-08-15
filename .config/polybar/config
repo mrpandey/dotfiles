@@ -406,14 +406,14 @@ label-close-foreground = ${colors.secondary}
 label-separator = ·
 label-separator-foreground = ${colors.foreground-alt}
 
-menu-0-0 = 
-menu-0-0-exec = i3 exit
-menu-0-1 = 
-menu-0-1-exec = systemctl reboot
-menu-0-2 = 
-menu-0-2-exec = systemctl poweroff
-menu-0-3 = 
-menu-0-3-exec = i3lock -i ~/.config/i3/lock_1366x768.png
+menu-0-0 = " "
+menu-0-0-exec = i3lock -i ~/.config/i3/lock_1366x768.png
+menu-0-1 = 
+menu-0-1-exec = i3 exit
+menu-0-2 = 
+menu-0-2-exec = systemctl reboot
+menu-0-3 = 
+menu-0-3-exec = systemctl poweroff
 
 [settings]
 screenchange-reload = true
