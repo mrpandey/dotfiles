@@ -14,8 +14,7 @@ set $mod Mod4
 # autostart
 exec_always --no-startup-id numlockx on
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-#exec_always --no-startup-id xautolock -time 5 -locker 'i3lock -i ~/.config/i3/lock_1366x768.png'
-exec_always --no-startup-id xautolock -time 5 -locker 'dm-tool lock'
+exec_always --no-startup-id xautolock -time 5 -locker 'i3lock -i ~/.config/i3/lock_1366x768.png'
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -138,8 +137,7 @@ bindsym $mod+Shift+r restart
 
 bindsym $mod+Shift+e exec i3 exit
 bindsym $mod+Shift+p exec systemctl poweroff
-#bindsym $mod+Shift+l exec i3lock -i ~/.config/i3/lock_1366x768.png
-bindsym $mod+Shift+l exec dm-tool lock
+bindsym $mod+Shift+l exec i3lock -i ~/.config/i3/lock_1366x768.png
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
