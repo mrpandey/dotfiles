@@ -197,7 +197,7 @@ client.focused #666666 #455a64 #ffffff #607d8b #455a64
 
 assign [class="Tilix|terminal"] 1
 assign [class="Firefox|Google-chrome"] 2
-assign [class="Thunar|Transmission-gtk"] 3
+assign [class="Thunar|Transmission-gtk|discord"] 3
 assign [class="Sublime|Atom|Code|Boost"] 4
 assign [class="Rhythmbox|mpv|vlc"] 5
 
