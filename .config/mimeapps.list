@@ -1,0 +1,26 @@
+[Added Associations]
+font/ttf=org.gnome.font-viewer.desktop;
+text/plain=org.gnome.gedit.desktop;mousepad.desktop;
+application/x-shellscript=org.gnome.gedit.desktop;vim.desktop;
+application/xml=org.gnome.gedit.desktop;exo-web-browser.desktop;
+video/mp4=mpv.desktop;
+application/pkix-cert+pem=gcr-viewer.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+image/png=ristretto.desktop;pinta.desktop;firefox.desktop;
+image/jpeg=ristretto.desktop;pinta.desktop;
+text/html=firefox.desktop;google-chrome.desktop;
+application/pdf=qpdfview.desktop;atril.desktop;
+application/zip=engrampa.desktop;
+video/x-matroska=mpv.desktop;vlc.desktop;
+audio/mpeg=rhythmbox.desktop;mpv.desktop;
+application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;
+application/vnd.oasis.opendocument.presentation=libreoffice-impress.desktop;
+application/x-subrip=org.gnome.gedit.desktop;
+video/x-msvideo=vlc.desktop;
+application/vnd.ms-excel=libreoffice-calc.desktop;
+text/markdown=org.gnome.gedit.desktop;
+
+[Default Applications]
+application/pdf=qpdfview.desktop
+image/png=ristretto.desktop
+image/jpeg=ristretto.desktop
