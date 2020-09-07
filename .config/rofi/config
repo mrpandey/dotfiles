@@ -1,14 +1,16 @@
+rofi.dpi: 1
 rofi.modi: drun,run,window
-rofi.lines: 16
+rofi.lines: 20
 rofi.columns: 1
-rofi.width: 33
+rofi.width: 50
 rofi.drun-icon-theme: Paper
+// rofi.theme-str : 'element-icon { size: 1.2ch;}'
 rofi.show-icons: true
 rofi.sidebar-mode: true
 rofi.m: -4
-rofi.font: UbuntuMono Nerd Font 11
-rofi.location: 7
-rofi.yoffset: -22
+rofi.font: UbuntuMono Nerd Font 9
+rofi.location: 0
+// rofi.yoffset: -22
 rofi.padding: 10
 rofi.line-padding: 3
 rofi.scrollbar-width: 5

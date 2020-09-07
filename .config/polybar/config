@@ -32,8 +32,10 @@ bar-icons-off = #f55
 
 [bar/bar1]
 ;monitor = ${env:MONITOR:HDMI-1}
+;dpi = 120
+dpi = ${xrdb:Xft.dpi:-1}
 width = 100%
-height = 22
+height = 24
 bottom = true
 ;offset-x = 1%
 ;offset-y = 1%
@@ -232,7 +234,8 @@ label =  %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp6s0
+;interface = wlp6s0
+interface = wlp0s20f3
 interval = 1.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -255,7 +258,8 @@ ramp-signal-foreground = ${colors.bar-icons}
 
 [module/eth]
 type = internal/network
-interface = enp7s0
+;interface = enp7s0
+interface = enp4s0
 interval = 1.0
 
 format-connected-underline = #55aa55
@@ -407,7 +411,7 @@ label-separator = ·
 label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = " "
-menu-0-0-exec = i3lock -i ~/.config/i3/lock_1366x768.png
+menu-0-0-exec = i3lock -i ~/.config/i3/lock_1920x1080.png
 menu-0-1 = 
 menu-0-1-exec = i3 exit
 menu-0-2 = 
