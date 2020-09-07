@@ -137,7 +137,7 @@ bindsym $mod+Shift+r restart
 
 bindsym $mod+Shift+e exec i3 exit
 bindsym $mod+Shift+p exec systemctl poweroff
-bindsym $mod+Shift+l exec i3lock -i ~/.config/i3/lock_1366x768.png
+bindsym $mod+Shift+l exec i3lock -i ~/.config/i3/lock_1920x1080.png
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -197,31 +197,37 @@ client.focused #666666 #455a64 #ffffff #607d8b #455a64
 
 assign [class="Tilix|terminal"] 1
 assign [class="Firefox|Google-chrome"] 2
-assign [class="Thunar|Transmission-gtk|discord"] 3
-assign [class="Sublime|Atom|Code|Boost"] 4
-assign [class="Rhythmbox|mpv|vlc"] 5
-
+assign [class="Thunar|Nautilus|Transmission-gtk|discord|Eog"] 3
+assign [class="Sublime|Atom|Code|Postman"] 4
+assign [class="Rhythmbox|mpv|vlc|zoom"] 5
 # For some reasons xprop shows LO writer's class as "libreoffice-writer"
 # but i3 assign works instead for class="Soffice".
 # Therefore, using "office" substring as class to match them all
-assign [class="pdf|Atril|office"] 6
+assign [class="pdf|Atril|Evince|office"] 6
+assign [class="Boost|Mattermost"] 7
+
+# com-zerog-lax-LAX is Crossover Worksmart
+assign [class="com-zerog-lax-LAX"] 9
 
 # Pulse Audio controls
 # see https://faq.i3wm.org/question/3747/enabling-multimedia-keys.1.html
-
+# 'pactl list short sinks' to see sink number and name
+# sink-name preferred over number; number is not static
+ 
 # increase vol
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo +5%
 
 # decrease vol
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -5%
 
 # mute
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute alsa_output.pci-0000_00_1f.3.analog-stereo toggle
 
 # full screenshot
-bindsym Print exec xfce4-screenshooter -f
+#bindsym Print exec xfce4-screenshooter -f
+bindsym Print exec gnome-screenshot
 
-# Sreen brightness controls using light v1.1.2
+# Sreen brightness controls using https://github.com/haikarainen/light v1.1.2
 # increase
 bindsym XF86MonBrightnessUp exec light -A 5
 # decrease
