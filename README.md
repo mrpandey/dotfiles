@@ -13,8 +13,8 @@ Configuration files of my Linux setup. Includes configs of following:
 ![Tilix](https://i.imgur.com/SKYNtx9.png)
 Tilix terminal with vim and random zsh themes.<br><br>
 
-![i3 with Polybar and Rofi](https://i.imgur.com/yKzJKzO.png)
-[i3-gaps](https://github.com/Airblader/i3) with [Polybar](https://github.com/jaagr/polybar) and [Rofi](https://github.com/DaveDavenport/rofi).
+![i3-gaps with Tilix, Polybar, and Rofi](https://i.imgur.com/BlmPRBZ.png)
+[i3-gaps](https://github.com/Airblader/i3) with [Tilix](https://github.com/gnunn1/tilix), [Polybar](https://github.com/jaagr/polybar), and [Rofi](https://github.com/DaveDavenport/rofi).
 
 ### License
 Licensed under [MIT](https://github.com/mrpandey/dotfiles/blob/master/LICENSE).
