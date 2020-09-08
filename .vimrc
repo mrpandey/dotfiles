@@ -1,12 +1,14 @@
+set nocompatible
 set number
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set whichwrap+=<,>,h,l
 
 " Vundle Begins----------
-
-set nocompatible              " be iMproved, required
+" custom change: moved the following line to beginning 
+" set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
