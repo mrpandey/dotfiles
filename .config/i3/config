@@ -197,7 +197,8 @@ client.focused #666666 #455a64 #ffffff #607d8b #455a64
 
 assign [class="Tilix|terminal"] 1
 assign [class="Firefox|Google-chrome"] 2
-assign [class="Thunar|Nautilus|Transmission-gtk|discord|Eog"] 3
+# Eog is image viewer in Ubuntu 20.04
+assign [class="Thunar|Nautilus|Transmission-gtk|discord|Eog|Shotwell"] 3
 assign [class="Sublime|Atom|Code|Postman"] 4
 assign [class="Rhythmbox|mpv|vlc|zoom"] 5
 # For some reasons xprop shows LO writer's class as "libreoffice-writer"
@@ -205,7 +206,6 @@ assign [class="Rhythmbox|mpv|vlc|zoom"] 5
 # Therefore, using "office" substring as class to match them all
 assign [class="pdf|Atril|Evince|office"] 6
 assign [class="Boost|Mattermost"] 7
-
 # com-zerog-lax-LAX is Crossover Worksmart
 assign [class="com-zerog-lax-LAX"] 9
 
