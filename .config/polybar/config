@@ -63,7 +63,7 @@ font-2 = "Monospace:pixelsize=9:antialias=true;0"
 
 modules-left = i3
 modules-center = 
-modules-right = eth wlan memory cpu pulseaudio battery date powermenu
+modules-right = pomodoro eth wlan memory cpu pulseaudio battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -418,6 +418,16 @@ menu-0-2 = 
 menu-0-2-exec = systemctl reboot
 menu-0-3 = 
 menu-0-3-exec = systemctl poweroff
+
+[module/pomodoro]
+; install https://github.com/codito/gnome-pomodoro
+; install https://github.com/kantord/i3-gnome-pomodoro
+type = custom/script
+click-left = i3-gnome-pomodoro toggle
+click-middle = gnome-pomodoro
+click-right = i3-gnome-pomodoro start_stop
+exec = i3-gnome-pomodoro status --always
+interval = 1
 
 [settings]
 screenchange-reload = true
