@@ -62,8 +62,8 @@ font-1 = "InconsolataGo Nerd Font:pixelsize=10:antialias=true;3"
 font-2 = "Monospace:pixelsize=9:antialias=true;0"
 
 modules-left = i3
-modules-center = 
-modules-right = pomodoro eth wlan memory cpu pulseaudio battery date powermenu
+modules-center = pomodoro 
+modules-right = eth wlan memory cpu pulseaudio battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -275,7 +275,7 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
 ;see https://en.cppreference.com/w/cpp/io/manip/put_time for formats
 
@@ -428,6 +428,7 @@ click-middle = gnome-pomodoro
 click-right = i3-gnome-pomodoro start_stop
 exec = i3-gnome-pomodoro status --always
 interval = 1
+format-foreground = #aaa
 
 [settings]
 screenchange-reload = true
