@@ -1,42 +1,44 @@
-[profiles/d6949578-e40c-41a3-9e40-0de62c651bcd]
-foreground-color='#EFEFEF'
-rewrap-on-resize=true
-visible-name='Modified 1'
-palette=['#000000', '#CC0000', '#4D9A05', '#C3A000', '#3464A3', '#754F7B', '#05979A', '#D3D6CF', '#545652', '#EF2828', '#89E234', '#FBE84F', '#729ECF', '#AC7EA8', '#34E2E2', '#EDEDEB']
-badge-color-set=true
-default-size-rows=20
-default-size-columns=80
-show-scrollbar=false
-scroll-on-output=true
-cursor-colors-set=false
-highlight-colors-set=false
-use-system-font=false
-bold-color-set=false
-font='Monospace 10'
-allow-bold=false
-terminal-bell='icon'
-use-theme-colors=false
-background-color='#202020'
+[/]
+auto-hide-mouse=true
+enable-wide-handle=false
+middle-click-close=true
+prompt-on-delete-profile=false
+quake-specific-monitor=0
+session-name='Tilix - ${directory} - ${title}'
+terminal-title-show-when-single=false
+terminal-title-style='small'
+theme-variant='system'
+use-tabs=true
+window-style='borderless'
+
+[keybindings]
+session-add-down='<Primary><Shift>d'
+session-add-right='<Primary><Shift>r'
+terminal-zoom-in='<Primary>equal'
 
 [profiles]
-list=['2b7c4080-0ddd-46c5-8f23-563fd3ba789d', 'd6949578-e40c-41a3-9e40-0de62c651bcd']
 default='d6949578-e40c-41a3-9e40-0de62c651bcd'
+list=['2b7c4080-0ddd-46c5-8f23-563fd3ba789d', 'd6949578-e40c-41a3-9e40-0de62c651bcd']
 
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
 visible-name='Default'
 
-[/]
-middle-click-close=true
-auto-hide-mouse=true
-terminal-title-style='small'
-theme-variant='system'
-session-name='Tilix - ${directory} - ${title}'
-use-tabs=true
-enable-wide-handle=false
-prompt-on-delete-profile=false
-terminal-title-show-when-single=false
-window-style='borderless'
-
-[keybindings]
-session-add-right='<Primary><Shift>r'
-session-add-down='<Primary><Shift>d'
+[profiles/d6949578-e40c-41a3-9e40-0de62c651bcd]
+allow-bold=false
+background-color='#202020'
+badge-color-set=true
+bold-color-set=false
+cursor-colors-set=false
+default-size-columns=80
+default-size-rows=20
+font='Monospace 10'
+foreground-color='#EFEFEF'
+highlight-colors-set=false
+palette=['#000000', '#CC0000', '#4D9A05', '#C3A000', '#3464A3', '#754F7B', '#05979A', '#D3D6CF', '#545652', '#EF2828', '#89E234', '#FBE84F', '#729ECF', '#AC7EA8', '#34E2E2', '#EDEDEB']
+rewrap-on-resize=true
+scroll-on-output=true
+show-scrollbar=false
+terminal-bell='icon'
+use-system-font=false
+use-theme-colors=false
+visible-name='Modified 1'
