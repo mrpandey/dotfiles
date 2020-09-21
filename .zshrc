@@ -103,3 +103,12 @@ source $ZSH/oh-my-zsh.sh
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte-2.91.sh
 fi
+
+# Crossover shortcut
+# alias xo='nohup ~/worksmart/./Crossover &; sleep 10; nohup ~/worksmart/./Crossover &'
+
+# Base16 Shell; Taken from https://github.com/chriskempson/base16-shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"

@@ -25,7 +25,7 @@ visible-name='Default'
 
 [profiles/d6949578-e40c-41a3-9e40-0de62c651bcd]
 allow-bold=false
-background-color='#202020'
+background-color='#1D1D1F1F2121'
 badge-color-set=true
 bold-color-set=false
 cursor-colors-set=false
