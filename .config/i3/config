@@ -225,7 +225,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute alsa_output.pci-0
 
 # full screenshot
 #bindsym Print exec xfce4-screenshooter -f
-bindsym Print exec gnome-screenshot
+bindsym Print exec gnome-screenshot -w
 
 # Sreen brightness controls using https://github.com/haikarainen/light v1.1.2
 # increase
