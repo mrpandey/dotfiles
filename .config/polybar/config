@@ -31,7 +31,7 @@ bar-icons = #689f38
 bar-icons-off = #f55
 
 [bar/bar1]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:HDMI-2}
 ;dpi = 120
 dpi = ${xrdb:Xft.dpi:-1}
 width = 100%
@@ -142,7 +142,7 @@ index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
 label-mode-padding = 1
 label-mode-foreground = #000
