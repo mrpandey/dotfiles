@@ -411,7 +411,7 @@ label-separator = ·
 label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = " "
-menu-0-0-exec = i3lock -i ~/.config/i3/lock_1920x1080.png
+menu-0-0-exec = i3lock -t -i ~/.config/i3/lock_1920x1080.png
 menu-0-1 = 
 menu-0-1-exec = i3 exit
 menu-0-2 = 
