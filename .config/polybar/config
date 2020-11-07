@@ -412,12 +412,14 @@ label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = " "
 menu-0-0-exec = i3lock -t -i ~/.config/i3/lock_1920x1080.png
-menu-0-1 = 
-menu-0-1-exec = i3 exit
-menu-0-2 = 
-menu-0-2-exec = systemctl reboot
-menu-0-3 = 
-menu-0-3-exec = systemctl poweroff
+menu-0-1 = zZ
+menu-0-1-exec = i3lock -t -i ~/.config/i3/lock_1920x1080.png && systemctl suspend
+menu-0-2 = 
+menu-0-2-exec = i3 exit
+menu-0-3 = 
+menu-0-3-exec = systemctl reboot
+menu-0-4 = 
+menu-0-4-exec = systemctl poweroff
 
 [module/pomodoro]
 ; install https://github.com/codito/gnome-pomodoro

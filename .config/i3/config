@@ -138,6 +138,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec i3 exit
 bindsym $mod+Shift+p exec systemctl poweroff
 bindsym $mod+Shift+l exec i3lock -t -i ~/.config/i3/lock_1920x1080.png
+bindsym $mod+Shift+s exec i3lock -t -i ~/.config/i3/lock_1920x1080.png && systemctl suspend
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
