@@ -176,6 +176,16 @@ bindsym $mod+r mode "resize"
 # CUSTOM ONES BELOW
 # =================
 
+# define display output names
+set $mon0 "eDP-1"
+set $mon1 "HDMI-2"
+
+# shortcuts for moving workspaces to different display outputs
+bindsym $mod+i move workspace to output up
+bindsym $mod+k move workspace to output down
+bindsym $mod+j move workspace to output left
+bindsym $mod+l move workspace to output right
+
 title_align center
 default_border none
 default_floating_border none
@@ -208,6 +218,17 @@ assign [class="pdf|Atril|Evince|office"] 6
 assign [class="Boost|Mattermost"] 7
 # com-zerog-lax-LAX is Crossover Worksmart
 assign [class="com-zerog-lax-LAX"] 9
+
+
+# define display outputs for workspaces
+workspace 1 output $mon0
+workspace 2 output $mon1
+workspace 3 output $mon1
+workspace 4 output $mon1
+workspace 5 output $mon1
+workspace 6 output $mon1
+workspace 7 output $mon0
+workspace 9 output $mon0
 
 # Pulse Audio controls
 # see https://faq.i3wm.org/question/3747/enabling-multimedia-keys.1.html
