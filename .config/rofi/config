@@ -1,6 +1,6 @@
 rofi.dpi: 1
 rofi.modi: drun,run,window
-rofi.matching: fuzzy
+// rofi.matching: fuzzy
 rofi.levenshtein-sort: true
 
 rofi.lines: 20
