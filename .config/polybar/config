@@ -68,7 +68,7 @@ modules-right = eth wlan memory cpu pulseaudio battery date powermenu
 tray-position = right
 tray-padding = 2
 ;tray-transparent = true
-;tray-background = #0063ff
+tray-background = #007279
 
 ;wm-restack = bspwm
 ;wm-restack = i3
