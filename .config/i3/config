@@ -216,7 +216,7 @@ assign [class="Rhythmbox|mpv|vlc|zoom|Spotify|youtube-music-desktop-app"] 5
 # but i3 assign works instead for class="Soffice".
 # Therefore, using "office" substring as class to match them all
 assign [class="pdf|Atril|Evince|office"] 6
-assign [class="Boost|Mattermost"] 7
+assign [class="Boost|Lotion|Mattermost"] 7
 # com-zerog-lax-LAX is Crossover Worksmart
 assign [class="com-zerog-lax-LAX"] 9
 
