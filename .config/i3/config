@@ -207,16 +207,16 @@ client.focused #666666 #455a64 #ffffff #607d8b #455a64
 # assign application to workspaces
 
 assign [class="Tilix|terminal"] 1
-assign [class="Firefox|Google-chrome"] 2
+assign [class="Firefox|Google-chrome|Brave-browser"] 2
 # Eog is image viewer in Ubuntu 20.04
-assign [class="Thunar|Nautilus|Transmission-gtk|discord|Eog|Shotwell|Solaar"] 3
+assign [class="Thunar|Nautilus|Transmission-gtk|discord|Eog|Shotwell|Solaar|TelegramDesktop"] 3
 assign [class="Sublime|Atom|Code|Postman|DBeaver"] 4
 assign [class="Rhythmbox|mpv|vlc|zoom|Spotify|youtube-music-desktop-app"] 5
 # For some reasons xprop shows LO writer's class as "libreoffice-writer"
 # but i3 assign works instead for class="Soffice".
 # Therefore, using "office" substring as class to match them all
 assign [class="pdf|Atril|Evince|office"] 6
-assign [class="Boost|Lotion|Mattermost"] 7
+assign [class="Boost|Lotion"] 7
 # com-zerog-lax-LAX is Crossover Worksmart
 assign [class="com-zerog-lax-LAX"] 9
 
