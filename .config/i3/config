@@ -243,6 +243,11 @@ bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/pactl_volume.sh -
 # mute
 bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/pactl_volume.sh M
 
+# playerctl media controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPrev exec playerctl  previous
+bindsym XF86AudioNext exec playerctl  next
+
 # full screenshot
 #bindsym Print exec xfce4-screenshooter -f
 bindsym Print exec gnome-screenshot -w
