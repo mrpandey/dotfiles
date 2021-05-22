@@ -19,7 +19,7 @@ Tilix terminal with vim and random zsh themes.<br><br>
 ### List of packages to install after fresh system install
 
 `git` `vim` `tilix` `mpv` `curl` `zsh` `powerline` `fonts-powerline` `oh-my-zsh` `i3-gaps` `rofi` `polybar` `i3-lock` `arandr` `autorandr` `nnn` 
-`vscode` `pinta` `qpdfview` `pavucontrol` `solaar` `gnome-shell-pomodoro` `logiops`
+`vscode` `pinta` `qpdfview` `pavucontrol` `solaar` `gnome-shell-pomodoro` `logiops` `playerctl`
 
 ### License
 Licensed under [MIT](https://github.com/mrpandey/dotfiles/blob/master/LICENSE).
