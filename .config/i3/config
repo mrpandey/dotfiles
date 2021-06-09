@@ -206,7 +206,7 @@ client.focused #666666 #455a64 #ffffff #607d8b #455a64
 
 # assign application to workspaces
 
-assign [class="Tilix|terminal"] 1
+#assign [class="Tilix|terminal"] 1
 assign [class="Firefox|Google-chrome|Brave-browser"] 2
 # Eog is image viewer in Ubuntu 20.04
 assign [class="Thunar|Nautilus|Transmission-gtk|discord|Eog|Shotwell|Solaar|TelegramDesktop"] 3
