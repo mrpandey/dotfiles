@@ -1,0 +1,5 @@
+{
+  "security.authenticatedUnlock.enabled": true,
+  "app.theme": "dark",
+  "keybinds.open": ""
+}
