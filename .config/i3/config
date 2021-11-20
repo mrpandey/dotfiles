@@ -260,7 +260,4 @@ bindsym XF86MonBrightnessDown exec light -U 5
 
 
 # i3-gnome-pomodoro shortcuts
-bindsym $mod+F9 exec "python ~/i3-gnome-pomodoro/pomodoro-client.py start"
-bindsym $mod+F10 exec "python ~/i3-gnome-pomodoro/pomodoro-client.py toggle"
-bindsym $mod+F11 exec "python ~/i3-gnome-pomodoro/pomodoro-client.py skip"
-bindsym $mod+F12 exec "python ~/i3-gnome-pomodoro/pomodoro-client.py stop"
+bindsym $mod+period exec gnome-pomodoro --start-stop
