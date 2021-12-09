@@ -63,7 +63,7 @@ font-2 = "Monospace:pixelsize=9:antialias=true;0"
 
 modules-left = i3
 modules-center = pomodoro 
-modules-right = eth wlan memory cpu pulseaudio battery date powermenu
+modules-right = eth wlan memory cpu pulseaudio battery date utc-time powermenu
 
 tray-position = right
 tray-padding = 2
@@ -293,6 +293,12 @@ format-foreground = #aaa
 
 label = %date% %time%
 
+[module/utc-time]
+type = custom/script
+exec = date --utc +"UTC  %a %d %b  %H:%M"
+interval = 1
+format-foreground = ${colors.bar-icons}
+
 [module/pulseaudio]
 type = internal/pulseaudio
 
@@ -430,7 +436,7 @@ click-middle = gnome-pomodoro
 click-right = i3-gnome-pomodoro start_stop
 exec = i3-gnome-pomodoro status --always
 interval = 1
-format-foreground = #aaa
+format-foreground = #ff7139
 
 [settings]
 screenchange-reload = true
