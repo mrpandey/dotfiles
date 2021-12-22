@@ -1,0 +1,4 @@
+/* hide the menubar/titlebar */
+#header {
+    display: none;
+}
