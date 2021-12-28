@@ -260,4 +260,5 @@ bindsym XF86MonBrightnessDown exec light -U 5
 
 
 # i3-gnome-pomodoro shortcuts
-bindsym $mod+period exec gnome-pomodoro --start-stop
+bindsym $mod+period exec i3-gnome-pomodoro start-stop
+bindsym $mod+comma exec i3-gnome-pomodoro skip
