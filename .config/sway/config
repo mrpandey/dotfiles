@@ -8,11 +8,6 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
-# Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
-set $right l
 # Your preferred terminal emulator
 set $term foot
 # Your preferred application launcher
@@ -26,13 +21,14 @@ include /etc/sway/config-vars.d/*
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg #138808 solid_color
 #
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+
+    output * bg #138808 solid_color
 
 ### Idle configuration
 #
@@ -60,6 +56,8 @@ output * bg #138808 solid_color
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
+
+    input * xkb_numlock enabled
 
 ### Key bindings
 #
@@ -90,22 +88,12 @@ output * bg #138808 solid_color
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
-    # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
     bindsym $mod+Up focus up
     bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
-    # Ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
@@ -162,6 +150,11 @@ output * bg #138808 solid_color
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+
+    # Default workspace layout
+    workspace_layout tabbed
+    # default container layout for ws1
+    for_window [workspace=1] layout splith
 #
 # Scratchpad:
 #
@@ -182,12 +175,6 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
-
-    # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
     bindsym Down resize grow height 10px
     bindsym Up resize shrink height 10px
@@ -203,21 +190,45 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position bottom
+#bar {
+#    position bottom
+#
+#    # When the status_command prints a new line to stdout, swaybar updates.
+#    # The default just shows the current date and time.
+#    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+#
+#    colors {
+#        statusline #ffffff
+#        background #323232
+#	focused_workspace #ffffff00 #ffffff00 #eeeeeeff
+#        inactive_workspace #323232 #323232 #888888ff
+#    }
+#}
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    bar swaybar_command waybar
 
-    colors {
-        statusline #ffffff
-        background #323232
-	focused_workspace #ffffff00 #ffffff00 #eeeeeeff
-        inactive_workspace #323232 #323232 #888888ff
-    }
-}
+#
+# View Properties
+#
+# gaps, padding, border, font, layout, etc.
+#
+    # these two are needed for hide_edge_borders to work
+    # we want title bars to be hidden for single child stacked/tabbed layout
+    default_border none
+    default_floating_border none
 
-gaps inner 2
+    gaps inner 2
+    smart_gaps on
+    smart_borders on
+    hide_edge_borders --i3 smart
 
+    # title bar font
+    font pango: JetBrains Mono 9
+    titlebar_border_thickness 0
+    titlebar_padding 3 1
+
+    # border, background, text color of title bar
+    client.focused #000000 #000000 #eeeeee #ffa700
+    client.unfocused #eeeeee #666666 #eeeeee #ffa700
+    client.focused_inactive #eeeeee #666666 #eeeeee #ffa700
 include /etc/sway/config.d/*
