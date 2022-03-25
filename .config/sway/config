@@ -153,12 +153,14 @@ include /etc/sway/config-vars.d/*
     # assign application to workspaces
 
     #assign [app_id="Tilix|terminal|foot"] 1
-    assign [app_id="firefox|Google-chrome|Brave-browser|Vivaldi-stable"] 2
+    assign [app_id="firefox|Google-chrome|Brave-browser"] 2
+    assign [class="Vivaldi-stable"] 2
     assign [app_id="Thunar|Nautilus|Transmission-gtk|Eog|Shotwell|Solaar"] 3
     assign [app_id="Sublime|Atom|Code|Postman|DBeaver|gedit"] 4
     assign [app_id="Rhythmbox|mpv|vlc|zoom|Spotify|youtube-music-desktop-app"] 5
     assign [instance="spotify"] 5
-    assign [app_id="pdf|Atril|Evince|libreoffice"] 6
+    assign [app_id="Atril|evince|libreoffice"] 6
+    assign [class="PDF|pdf"] 6
     assign [class="Notion"] 7
     assign [app_id="zoom|discord|TelegramDesktop"] 8
 
@@ -269,4 +271,13 @@ bindsym $mod+r mode "resize"
     client.focused #000000 #000000 #eeeeee #ffa700
     client.unfocused #eeeeee #666666 #eeeeee #ffa700
     client.focused_inactive #eeeeee #666666 #eeeeee #ffa700
+
+#
+# Media Shortcuts
+
+    bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
 include /etc/sway/config.d/*
