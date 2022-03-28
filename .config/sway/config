@@ -163,6 +163,7 @@ include /etc/sway/config-vars.d/*
     assign [class="PDF|pdf"] 6
     assign [class="Notion"] 7
     assign [app_id="zoom|discord|TelegramDesktop"] 8
+    assign [app_id="blueman-manager"] 10
 
 
 #
