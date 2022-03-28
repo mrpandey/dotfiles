@@ -13,7 +13,7 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu ~/bin/yofi-ubuntu-20.04 | xargs swaymsg exec --
+set $menu ~/.local/bin/yofi-ubuntu-20.04 | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
@@ -276,10 +276,13 @@ bindsym $mod+r mode "resize"
 # Media Shortcuts
 
     # volue controls
-    bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym --locked XF86AudioMute exec ~/.local/bin/pactl_volume.sh M
+    bindsym --locked XF86AudioLowerVolume exec ~/.local/bin/pactl_volume.sh -5%
+    bindsym --locked XF86AudioRaiseVolume exec ~/.local/bin/pactl_volume.sh +5%
     bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    bindsym XF86AudioPlay exec "playerctl --player=spotify play-pause"
+    bindsym XF86AudioPrev exec "playerctl --player=spotify previous"
+    bindsym XF86AudioNext exec "playerctl --player=spotify next"
     
     # increment/decrement brightness in exponential percentage
     bindsym --locked XF86MonBrightnessDown exec brillo -q -U 1
