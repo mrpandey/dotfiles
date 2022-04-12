@@ -289,4 +289,9 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brillo -q -U 1
     bindsym --locked XF86MonBrightnessUp exec brillo -q -A 1
 
+#
+# Open these apps in floating window
+
+    for_window [app_id="calculator"] floating enable
+
 include /etc/sway/config.d/*
