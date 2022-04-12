@@ -157,14 +157,15 @@ include /etc/sway/config-vars.d/*
     assign [class="Vivaldi-stable"] 2
     assign [app_id="Thunar|Nautilus|Transmission-gtk|Eog|Shotwell|Solaar"] 3
     assign [app_id="Sublime|Atom|Code|Postman|DBeaver|gedit"] 4
-    assign [app_id="Rhythmbox|mpv|vlc|zoom|Spotify|youtube-music-desktop-app"] 5
-    assign [instance="spotify"] 5
+    assign [app_id="Rhythmbox|mpv|vlc|zoom|youtube-music-desktop-app"] 5
     assign [app_id="Atril|evince|libreoffice"] 6
     assign [class="PDF|pdf"] 6
     assign [class="Notion"] 7
     assign [app_id="zoom|discord|TelegramDesktop"] 8
     assign [app_id="blueman-manager"] 10
-
+    
+    # assign does not work for spotify
+    for_window [class="Spotify"] move window to workspace 5
 
 #
 # Layout stuff:
