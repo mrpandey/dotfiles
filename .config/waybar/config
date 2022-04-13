@@ -2,16 +2,28 @@
     "layer": "top",
     "position": "bottom",
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["battery", "clock"],
-    "sway/window": {
-        "max-length": 50
-    },
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "clock", "tray"],
     "battery": {
-        "format": "{capacity}% {icon}",
+        "states": {
+            "good": 90,
+            "warning": 40,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-charging": " {icon} {capacity}%",
+        "format-plugged": " {icon} {capacity}%",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}"
-    }
+        "format": "{:  %a, %d %b    %H:%M}",
+        "tooltip": false,
+        // "format-alt": "{:  %a, %d %b    %H:%M}",
+        // "tooltip-format": "{:  %a, %d %b    %H:%M}"
+    },
+    "tray": {
+        "spacing": 10
+    },
 }
