@@ -1,8 +1,8 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-family: "UbuntuMono Nerd Font", "InconsolataGo Nerd Font", Monospace;
+    font-size: 14px;
     min-height: 0;
 }
 
@@ -59,4 +59,8 @@ tooltip label {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+#pulseaudio.muted {
+    color: #bd2c40;
 }
