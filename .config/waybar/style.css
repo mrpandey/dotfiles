@@ -15,8 +15,17 @@ tooltip {
   background: rgba(10, 10, 10, 0.8);
   border: 1px solid rgba(100, 114, 125, 0.5);
 }
+
 tooltip label {
   color: white;
+}
+
+.warning {
+    color: #ffe900;
+}
+
+.critical {
+    color: #bd2c40;
 }
 
 #workspaces button {
@@ -41,10 +50,6 @@ tooltip label {
 
 #clock {
     background-color: #64727D;
-}
-
-#battery.warning {
-    color: #ffe900;
 }
 
 @keyframes blink {

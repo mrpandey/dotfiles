@@ -8,27 +8,42 @@
         "format-bluetooth": "{icon}  {volume}%",
         "format-muted": "",
         "format-icons": {
-            "headphone": "",
+            "headphone": "",
             "hands-free": "",
-            "headset": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", ""]
+            "default": ["", ""]
         },
         "scroll-step": 1,
         "on-click": "pavucontrol"
+    },
+    "cpu": {
+        "states": {
+            "warning": 40,
+            "critical": 70
+        },
+        "format": " {usage}%",
+        "interval": 1
+    },
+    "memory": {
+        "states": {
+            "warning": 60,
+            "critical": 90
+        },
+        "format": " {}%"
     },
     "battery": {
         "states": {
             "good": 90,
             "warning": 40,
-            "critical": 20
+            "critical": 15
         },
         "format": "{icon} {capacity}%",
         "format-alt": "{icon} {time}",
         "format-charging": " {icon} {capacity}%",
-        "format-plugged": " {icon} {capacity}%",
+        "format-plugged": " {icon} {capacity}%",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
