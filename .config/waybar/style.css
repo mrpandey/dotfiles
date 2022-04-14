@@ -39,6 +39,10 @@ tooltip label {
     border-bottom: 2px solid white;
 }
 
+#workspaces button.urgent {
+    background: #ffe900;
+}
+
 #mode, #network, #pulseaudio, #keyboard-state, #cpu, #memory, #battery, #clock, #tray {
     padding: 0 10px;
 }

@@ -3,6 +3,22 @@
     "position": "bottom",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-right": ["network", "pulseaudio", "keyboard-state", "cpu", "memory", "battery", "clock", "tray"],
+    "sway/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "𝟴",
+            "9": "𝟵",
+            "10": "𝟭𝟬"
+        }
+    },
     "network": {
         "format": "{ifname}",
         "interval": 1,
