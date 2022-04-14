@@ -2,10 +2,10 @@
     "layer": "top",
     "position": "bottom",
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "clock", "tray"],
+    "modules-right": ["pulseaudio", "keyboard-state", "network", "cpu", "memory", "battery", "clock", "tray"],
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon}  {volume}%",
+        "format-bluetooth": " {icon} {volume}%",
         "format-muted": "",
         "format-icons": {
             "headphone": "",
@@ -18,6 +18,18 @@
         },
         "scroll-step": 1,
         "on-click": "pavucontrol"
+    },
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": {
+            "capslock": "🅰 {icon}",
+            "numlock": "   {icon}",
+        },
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
     },
     "cpu": {
         "states": {
