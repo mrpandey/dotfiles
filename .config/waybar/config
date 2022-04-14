@@ -2,7 +2,20 @@
     "layer": "top",
     "position": "bottom",
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-right": ["pulseaudio", "keyboard-state", "network", "cpu", "memory", "battery", "clock", "tray"],
+    "modules-right": ["network", "pulseaudio", "keyboard-state", "cpu", "memory", "battery", "clock", "tray"],
+    "network": {
+        "format": "{ifname}",
+        "interval": 1,
+        "format-wifi": " {bandwidthUpBits}  {bandwidthDownBits} {icon} {essid} {signalStrength}%",
+        "format-ethernet": "  {bandwidthUpBits}  {bandwidthDownBits}",
+        "format-disconnected": "睊", //An empty format will hide the module.
+        "tooltip-format": " {ifname} via {gwaddr}",
+        "tooltip-format-wifi": "{icon} {essid} {signalStrength}%",
+        "tooltip-format-ethernet": " {ifname} {ipaddr}/{cidr}",
+        "tooltip-format-disconnected": " Disconnected",
+        // "max-length": 50,
+        "format-icons": ["直", ""]
+    },
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-bluetooth": " {icon} {volume}%",

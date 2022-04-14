@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-    background: rgba(10, 10, 10, 1);
+    background: rgba(0, 10, 10, 1);
     color: white;
 }
 
@@ -39,7 +39,7 @@ tooltip label {
     border-bottom: 2px solid white;
 }
 
-#mode, #pulseaudio, #network, #cpu, #memory, #clock, #battery, #tray {
+#mode, #network, #pulseaudio, #keyboard-state, #cpu, #memory, #battery, #clock, #tray {
     padding: 0 10px;
 }
 
@@ -48,8 +48,16 @@ tooltip label {
     border-bottom: 2px solid #ffe900;
 }
 
-#clock {
-    background-color: #64727D;
+#pulseaudio {
+    color: #48aaad;
+}
+
+#pulseaudio.muted {
+    color: #bd2c40;
+}
+
+#keyboard-state label.locked {
+    color: #689f38;
 }
 
 @keyframes blink {
@@ -66,6 +74,6 @@ tooltip label {
     animation-direction: alternate;
 }
 
-#pulseaudio.muted {
-    color: #bd2c40;
+#clock {
+    background-color: #64727D;
 }
