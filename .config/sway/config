@@ -282,13 +282,17 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86AudioLowerVolume exec ~/.local/bin/pactl_volume.sh -5%
     bindsym --locked XF86AudioRaiseVolume exec ~/.local/bin/pactl_volume.sh +5%
     bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-    bindsym XF86AudioPlay exec "playerctl --player=spotify play-pause"
-    bindsym XF86AudioPrev exec "playerctl --player=spotify previous"
-    bindsym XF86AudioNext exec "playerctl --player=spotify next"
+    bindsym --locked XF86AudioPlay exec "playerctl --player=spotify play-pause"
+    bindsym --locked XF86AudioPrev exec "playerctl --player=spotify previous"
+    bindsym --locked XF86AudioNext exec "playerctl --player=spotify next"
     
     # increment/decrement brightness in exponential percentage
     bindsym --locked XF86MonBrightnessDown exec brillo -q -U 1
     bindsym --locked XF86MonBrightnessUp exec brillo -q -A 1
+    
+    # pomodoro timer
+    # using this one: https://github.com/open-pomodoro/openpomodoro-cli
+    bindsym $mod+period exec ~/.local/bin/pomodoro start -d 25
 
 #
 # Open these apps in floating window

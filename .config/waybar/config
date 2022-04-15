@@ -2,6 +2,7 @@
     "layer": "top",
     "position": "bottom",
     "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["custom/pomodoro"],
     "modules-right": ["network", "pulseaudio", "keyboard-state", "cpu", "memory", "battery", "clock", "tray"],
     "sway/workspaces": {
         "format": "{icon}",
@@ -19,10 +20,15 @@
             "10": "𝟭𝟬"
         }
     },
+    "custom/pomodoro": {
+        "exec": "~/.local/bin/pomodoro status -f \"⏳ %!r  🍅 %c%!g\"",
+        "interval": 1,
+        "format": "{}"
+    },
     "network": {
         "format": "{ifname}",
         "interval": 1,
-        "format-wifi": " {bandwidthUpBits}  {bandwidthDownBits} {icon} {essid} {signalStrength}%",
+        "format-wifi": " {bandwidthUpBits}  {bandwidthDownBits} {icon} {signalStrength}%",
         "format-ethernet": "  {bandwidthUpBits}  {bandwidthDownBits}",
         "format-disconnected": "睊", //An empty format will hide the module.
         "tooltip-format": " {ifname} via {gwaddr}",

@@ -52,6 +52,11 @@ tooltip label {
     border-bottom: 2px solid #ffe900;
 }
 
+#custom-pomodoro {
+    color: #bd2c40;
+    font-weight: 700;
+}
+
 #pulseaudio {
     color: #48aaad;
 }
