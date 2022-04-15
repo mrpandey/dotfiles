@@ -275,7 +275,7 @@ bindsym $mod+r mode "resize"
     client.focused_inactive #eeeeee #666666 #eeeeee #ffa700
 
 #
-# Media Shortcuts
+# Media and other shortcuts
 
     # volue controls
     bindsym --locked XF86AudioMute exec ~/.local/bin/pactl_volume.sh M
@@ -293,6 +293,9 @@ bindsym $mod+r mode "resize"
     # pomodoro timer
     # using this one: https://github.com/open-pomodoro/openpomodoro-cli
     bindsym $mod+period exec ~/.local/bin/pomodoro start -d 25
+    
+    # screen lock
+    bindsym $mod+Shift+l exec swaylock -i /home/avinash/dotfiles/wallpapers/street_light_night_1920x1080.jpg
 
 #
 # Open these apps in floating window
