@@ -51,6 +51,7 @@
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
+        "interval": 1,
         "format": {
             "capslock": "🅰 {icon}",
             "numlock": "   {icon}",
@@ -73,6 +74,7 @@
             "warning": 60,
             "critical": 90
         },
+        "interval": 1,
         "format": " {}%"
     },
     "battery": {
@@ -81,6 +83,7 @@
             "warning": 40,
             "critical": 15
         },
+        "interval": 60,
         "format": "{icon} {capacity}%",
         "format-alt": "{icon} {time}",
         "format-charging": " {icon} {capacity}%",
@@ -92,6 +95,7 @@
     "clock": {
         "format": "{:  %a, %d %b    %H:%M}",
         "tooltip": false,
+        "interval": 1,
         // "format-alt": "{:  %a, %d %b    %H:%M}",
         // "tooltip-format": "{:  %a, %d %b    %H:%M}"
     },
