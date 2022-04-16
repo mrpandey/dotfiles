@@ -267,7 +267,7 @@ bindsym $mod+r mode "resize"
     # title bar font
     font pango: JetBrains Mono 9
     titlebar_border_thickness 0
-    titlebar_padding 3 1
+    titlebar_padding 30 1
 
     # border, background, text color of title bar
     client.focused #000000 #000000 #eeeeee #ffa700
