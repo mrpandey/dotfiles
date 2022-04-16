@@ -294,8 +294,9 @@ bindsym $mod+r mode "resize"
     # using this one: https://github.com/open-pomodoro/openpomodoro-cli
     bindsym $mod+period exec ~/.local/bin/pomodoro start -d 25
     
-    # screen lock
+    # screen lock and suspend
     bindsym $mod+Shift+l exec swaylock -i /home/avinash/dotfiles/wallpapers/street_light_night_1920x1080.jpg
+    bindsym $mod+Shift+s exec swaylock -f -i /home/avinash/dotfiles/wallpapers/street_light_night_1920x1080.jpg && systemctl suspend
 
 #
 # Open these apps in floating window
