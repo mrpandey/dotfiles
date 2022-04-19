@@ -298,6 +298,23 @@ bindsym $mod+r mode "resize"
     bindsym $mod+Shift+l exec swaylock -i /home/avinash/dotfiles/wallpapers/street_light_night_1920x1080.jpg
     bindsym $mod+Shift+s exec swaylock -f -i /home/avinash/dotfiles/wallpapers/street_light_night_1920x1080.jpg && systemctl suspend
 
+    # swayshot: https://gitlab.com/radio_rogal/swayshot
+    # Save screenshots at $SWAYSHOT_SCREENSHOTS as set in ~/.config/swayshot.sh
+
+    # PrtScn captures active display
+    bindsym Print exec swayshot
+    
+    # Alt+Print captures focused window
+    bindsym Mod1+Print exec swayshot window
+    
+    # Select picture and save
+    bindsym Shift+Print exec swayshot region
+    
+    # Using with Super key uploads the image to x0.at
+    # bindsym Mod4+Print exec swayshot display upload
+    # bindsym Mod4+Mod1+Print exec swayshot window  upload
+    # bindsym Mod4+Shift+Print exec swayshot region  upload
+
 #
 # Open these apps in floating window
 
