@@ -44,8 +44,9 @@ include /etc/sway/config-vars.d/*
     workspace 9 output $disp1
     workspace 10 output $disp1
     
-    # solid background for each display
-    output * bg #138808 solid_color
+    # background for display
+    # output * bg #138808 solid_color
+    output * bg $HOME/dotfiles/wallpapers/underwater-minimal-1920×1080.jpg fill
     
     # shortcuts for moving workspaces to different display outputs
     bindsym $mod+i move workspace to output up
@@ -295,8 +296,8 @@ bindsym $mod+r mode "resize"
     bindsym $mod+period exec ~/.local/bin/pomodoro start -d 25
     
     # screen lock and suspend
-    bindsym $mod+Shift+l exec swaylock -i /home/avinash/dotfiles/wallpapers/street_light_night_1920x1080.jpg
-    bindsym $mod+Shift+s exec swaylock -f -i /home/avinash/dotfiles/wallpapers/street_light_night_1920x1080.jpg && systemctl suspend
+    bindsym $mod+Shift+l exec swaylock -i $HOME/dotfiles/wallpapers/beautiful-stream-1920×1080.jpg
+    bindsym $mod+Shift+s exec swaylock -f -i $HOME/dotfiles/wallpapers/Dimlight-Girl-Balcony_2560x1440.jpg && systemctl suspend
 
     # swayshot: https://gitlab.com/radio_rogal/swayshot
     # Save screenshots at $SWAYSHOT_SCREENSHOTS as set in ~/.config/swayshot.sh
