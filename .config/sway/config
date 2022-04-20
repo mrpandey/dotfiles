@@ -5,15 +5,21 @@
 # Read `man 5 sway` for a complete reference.
 
 ### Variables
-#
+
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+
 # Your preferred terminal emulator
 set $term foot
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu ~/.local/bin/yofi-ubuntu-20.04 | xargs swaymsg exec --
+
+# wallpapers directory
+set $wallpapers_path $HOME/dotfiles/wallpapers/minimal
+set $locked_wallpapers_path $HOME/dotfiles/wallpapers/others
 
 include /etc/sway/config-vars.d/*
 
@@ -46,7 +52,7 @@ include /etc/sway/config-vars.d/*
     
     # background for display
     # output * bg #138808 solid_color
-    output * bg $HOME/dotfiles/wallpapers/underwater-minimal-1920×1080.jpg fill
+    output * bg `find $wallpapers_path -type f | shuf -n 1` fill
     
     # shortcuts for moving workspaces to different display outputs
     bindsym $mod+i move workspace to output up
@@ -296,8 +302,8 @@ bindsym $mod+r mode "resize"
     bindsym $mod+period exec ~/.local/bin/pomodoro start -d 25
     
     # screen lock and suspend
-    bindsym $mod+Shift+l exec swaylock -i $HOME/dotfiles/wallpapers/beautiful-stream-1920×1080.jpg
-    bindsym $mod+Shift+s exec swaylock -f -i $HOME/dotfiles/wallpapers/Dimlight-Girl-Balcony_2560x1440.jpg && systemctl suspend
+    bindsym $mod+Shift+l exec swaylock -i `find $locked_wallpapers_path -type f | shuf -n 1`
+    bindsym $mod+Shift+s exec swaylock -f -i `find $locked_wallpapers_path -type f | shuf -n 1` && systemctl suspend
 
     # swayshot: https://gitlab.com/radio_rogal/swayshot
     # Save screenshots at $SWAYSHOT_SCREENSHOTS as set in ~/.config/swayshot.sh
