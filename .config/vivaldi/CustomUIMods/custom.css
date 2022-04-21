@@ -1,3 +1,7 @@
+/* To enable custom CSS:
+ * 1. Go to vivaldi://experiments/ and check the custom CSS box
+ * 2. Go to Setting > Appearance > Custom UI Modification and select this directory
+
 /* hide the menubar/titlebar */
 #header {
     display: none;
