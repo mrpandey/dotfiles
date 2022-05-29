@@ -88,6 +88,14 @@ include /etc/sway/config-vars.d/*
 # Read `man 5 sway-input` for more information about this section.
 
     input * xkb_numlock enabled
+    
+    input "2:7:SynPS/2_Synaptics_TouchPad" {
+        dwt enabled
+        tap enabled
+        natural_scroll disabled
+        middle_emulation enabled
+        
+    }
 
 ### Key bindings
 #
@@ -299,7 +307,7 @@ bindsym $mod+r mode "resize"
     
     # pomodoro timer
     # using this one: https://github.com/open-pomodoro/openpomodoro-cli
-    bindsym $mod+period exec ~/.local/bin/pomodoro start -d 25
+    bindsym $mod+period exec ~/.local/bin/pomodoro start -d 20
     
     # screen lock and suspend
     bindsym $mod+Shift+l exec swaylock -i `find $locked_wallpapers_path -type f | shuf -n 1`
