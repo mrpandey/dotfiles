@@ -1,0 +1,9 @@
+max-visible=3
+layer=overlay
+anchor=bottom-right
+background-color=#64727D
+border-size=0
+default-timeout=5000
+
+[urgency=high]
+background-color=#BD2C40
