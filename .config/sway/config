@@ -97,6 +97,9 @@ include /etc/sway/config-vars.d/*
         
     }
 
+### Autostart Programs
+    exec mako
+
 ### Key bindings
 #
 # Basics:
