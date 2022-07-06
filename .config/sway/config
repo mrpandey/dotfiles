@@ -37,6 +37,10 @@ include /etc/sway/config-vars.d/*
     # define display output names
     set $disp1 "eDP-1"
     set $disp2 "HDMI-A-1"
+
+    # position outputs
+    output $disp1 pos 0 0
+    output $disp2 pos 1920 0
     
     # default display outputs for workspaces with fallback to disp1
     workspace 1 output $disp2 $disp1
@@ -47,7 +51,7 @@ include /etc/sway/config-vars.d/*
     workspace 6 output $disp2 $disp1
     workspace 7 output $disp2 $disp1
     workspace 8 output $disp2 $disp1
-    workspace 9 output $disp1
+    workspace 9 output $disp2 $disp1
     workspace 10 output $disp1
     
     # background for display
@@ -180,7 +184,7 @@ include /etc/sway/config-vars.d/*
     assign [class="PDF|pdf"] 6
     assign [class="Notion"] 7
     assign [app_id="zoom|discord|TelegramDesktop"] 8
-    assign [app_id="blueman-manager"] 10
+    assign [app_id="blueman-manager"] 9
     
     # assign does not work for spotify
     for_window [class="Spotify"] move window to workspace 5
