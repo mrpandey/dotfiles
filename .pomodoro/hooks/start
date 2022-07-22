@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+# extract duration mins
+duration=$(cut -d'=' -f2 ~/.pomodoro/current)
+
+# extract current pomo
+pomo=$(cat ~/.pomodoro/current)
+
+# eval $(cut -d' ' -f2- ~/.pomodoro/current)
+sleep ${duration}m
+
+# TODO: check if the current file contents have changed
+# if yes, then exit since current one was canceled or new one was started
+pomo_now=$(cat ~/.pomodoro/current)
+
+if [[ $pomo = $pomo_now ]]; then
+	notify-send --icon="/home/avinash/.pomo/icon.png" "Pomodoro ended." "Stand up. Hydrate. Stretch. Blink. Look outside.\nThen resume."
+fi

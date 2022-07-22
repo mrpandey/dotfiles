@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-set -exo pipefail
-
-notify-send --icon="/home/avinash/.pomo/icon.png" "Pomodoro ended." "Stand up. Hydrate. Stretch. Blink. Look outside.\nThen resume."
