@@ -10,7 +10,7 @@ pomo=$(cat ~/.pomodoro/current)
 # eval $(cut -d' ' -f2- ~/.pomodoro/current)
 sleep ${duration}m
 
-# TODO: check if the current file contents have changed
+# check if the current file contents have changed
 # if yes, then exit since current one was canceled or new one was started
 pomo_now=$(cat ~/.pomodoro/current)
 
