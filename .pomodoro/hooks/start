@@ -4,11 +4,11 @@ set -eo pipefail
 current_file=~/.pomodoro/current
 icon_file=~/.pomo/icon.png
 
-# extract duration mins
-duration=$(cut -d'=' -f2 $current_file)
-
 # extract current pomo
 pomo=$(cat $current_file)
+
+# extract duration mins
+duration=$(echo $pomo | cut -f2 -d'=')
 
 sleep ${duration}m
 
