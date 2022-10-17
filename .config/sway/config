@@ -315,6 +315,7 @@ bindsym $mod+r mode "resize"
     # pomodoro timer
     # using this one: https://github.com/open-pomodoro/openpomodoro-cli
     bindsym $mod+period exec ~/.local/bin/pomodoro start -d 20
+    bindsym $mod+comma exec ~/.local/bin/pomodoro cancel
     
     # screen lock and suspend
     bindsym $mod+Shift+l exec swaylock -i `find $locked_wallpapers_path -type f | shuf -n 1`
