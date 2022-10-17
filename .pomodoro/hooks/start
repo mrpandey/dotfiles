@@ -17,5 +17,5 @@ sleep ${duration}m
 pomo_now=$(cat $current_file)
 
 if [[ $pomo = $pomo_now ]]; then
-	notify-send --icon=$icon_file "Pomodoro ended." "Stand up. Hydrate. Stretch. Blink. Look outside.\nThen resume."
+	notify-send --icon=$icon_file --expire-time=0 "Pomodoro ended." "Stand up. Hydrate. Stretch. Blink. Look outside.\nThen resume."
 fi
