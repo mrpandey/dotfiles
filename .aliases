@@ -1,0 +1,3 @@
+# Alias for Notion if installed through nativefier to enable wayland support.
+# Can't use notion as the alias as it is already a package in repository.
+alias notionso="($HOME/.local/share/notion/Notion --enable-features=UseOzonePlatform --ozone-platform=wayland &) >/dev/null 2>&1"
