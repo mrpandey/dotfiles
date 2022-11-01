@@ -1,0 +1,9 @@
+[Icon Theme]
+Name=Hicolor
+Comment=Fallback local icon theme
+Directories=48x48/apps
+
+[48x48/apps]
+Size=48
+Context=Applications
+Type=Threshold
