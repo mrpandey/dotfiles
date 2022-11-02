@@ -1,15 +1,15 @@
-/* extra steps to make it work in firefox
+/* extra steps to make custom CSS work
  * (taken from  https://www.userchrome.org/how-create-userchrome-css.html)
  *
  * 1. open about:config
  * 2. set toolkit.legacyUserProfileCustomizations.stylesheets to true
- * 3. set browser.uidensity to 1
  */
 
 @-moz-document url(chrome://browser/content/browser.xul),
                url(chrome://browser/content/browser.xhtml) {
 
   /* hide horizontal tabs at the top of the window */
+  /* set browser.uidensity to 1 in about:config to enable compact mode.*/
   #TabsToolbar > * {
     visibility: collapse;
   }
