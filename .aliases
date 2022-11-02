@@ -1,3 +1,7 @@
 # Alias for Notion if installed through nativefier.
 # Note: 'notion' is an irrelevant package in Ubuntu repos. But never gonna use it, so this alias name is ok.
 alias notion="($HOME/.local/share/notion/notion --enable-features=UseOzonePlatform --ozone-platform=wayland &) >/dev/null 2>&1"
+
+# Note: wlc is an irrelevant package in Ubuntu repos. But, probably won't ever use it.
+alias wlc=wl-copy
+alias wlp=wl-paste
