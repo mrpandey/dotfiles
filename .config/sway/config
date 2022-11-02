@@ -36,11 +36,11 @@ include /etc/sway/config-vars.d/*
 
     # define display output names
     set $disp1 "eDP-1"
-    set $disp2 "HDMI-A-1"
+    set $disp2 "DP-2"
 
     # position outputs
-    output $disp1 pos 0 0
-    output $disp2 pos 1920 0
+    output $disp1 pos 0 360
+    output $disp2 pos 1920 0 scale 1.5
     
     # default display outputs for workspaces with fallback to disp1
     workspace 1 output $disp2 $disp1
@@ -175,14 +175,14 @@ include /etc/sway/config-vars.d/*
     # assign application to workspaces
 
     #assign [app_id="Tilix|terminal|foot"] 1
-    assign [app_id="Google-chrome|Brave-browser"] 2
-    assign [class="Vivaldi-stable|firefox"] 2
+    assign [app_id="firefox|Google-chrome|Brave-browser"] 2
+    assign [class="Vivaldi-stable"] 2
     assign [app_id="Thunar|Nautilus|Transmission-gtk|Eog|Shotwell|Solaar"] 3
     assign [app_id="Sublime|Atom|Code|Postman|DBeaver|gedit"] 4
     assign [app_id="Rhythmbox|mpv|vlc|zoom|youtube-music-desktop-app"] 5
     assign [app_id="Atril|evince|libreoffice"] 6
     assign [class="PDF|pdf"] 6
-    assign [class="Notion"] 7
+    assign [app_id="notion"] 7
     assign [app_id="zoom|discord|TelegramDesktop"] 8
     assign [app_id="blueman-manager"] 9
     
