@@ -1,4 +1,4 @@
-Steps to add custom CSS:
+To add/enable custom CSS:
 1. Open about:config
 2. Set toolkit.legacyUserProfileCustomizations.stylesheets to true
 3. Copy the chrome/ directory to root profile directory of Firefox, whose location can be found through about:profiles
@@ -11,3 +11,5 @@ To enable compact mode:
 To prevent closing window when closing last tab:
 1. Open about:config
 2. Set browser.tabs.closeWindowWithLastTab to false
+
+To enable wayland mode look at .config/environment.d/envvars.conf
