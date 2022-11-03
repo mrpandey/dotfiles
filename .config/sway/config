@@ -18,8 +18,8 @@ set $term foot
 set $menu ~/.local/bin/yofi-ubuntu-20.04 | xargs swaymsg exec --
 
 # wallpapers directory
-set $wallpapers_path $HOME/dotfiles/wallpapers/minimal
-set $locked_wallpapers_path $HOME/dotfiles/wallpapers/others
+set $wallpapers_path $HOME/Pictures/wallpapers/minimal
+set $locked_wallpapers_path $HOME/Pictures/wallpapers/others
 
 include /etc/sway/config-vars.d/*
 
