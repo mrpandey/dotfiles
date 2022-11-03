@@ -5,3 +5,5 @@ alias notion="($HOME/.local/share/notion/notion --enable-features=UseOzonePlatfo
 # Note: wlc is an irrelevant package in Ubuntu repos. But, probably won't ever use it.
 alias wlc=wl-copy
 alias wlp=wl-paste
+
+alias python=python3
