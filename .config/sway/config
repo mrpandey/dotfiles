@@ -21,6 +21,17 @@ set $menu ~/.local/bin/yofi-ubuntu-20.04 | xargs swaymsg exec --
 set $wallpapers_path $HOME/Pictures/wallpapers/minimal
 set $locked_wallpapers_path $HOME/Pictures/wallpapers/others
 
+# GTK3 Settings
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Yaru-dark'
+    gsettings set $gnome-schema icon-theme 'Yaru-dark'
+    gsettings set $gnome-schema color-scheme prefer-dark
+    gsettings set $gnome-schema cursor-theme 'Yaru'
+    gsettings set $gnome-schema font-name 'Ubuntu 12'
+}
+
 include /etc/sway/config-vars.d/*
 
 ### Output configuration
