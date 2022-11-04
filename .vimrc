@@ -6,6 +6,8 @@ set softtabstop=4
 set expandtab
 set whichwrap+=<,>,h,l
 
+syntax on
+
 " Vundle Begins----------
 " custom change: moved the following line to beginning 
 " set nocompatible              " be iMproved, required
@@ -25,9 +27,9 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'tomasiser/vim-code-dark'
-Plugin 'joshdick/onedark.vim'
-Plugin 'chriskempson/base16-vim'
+" Plugin 'tomasiser/vim-code-dark'
+" Plugin 'joshdick/onedark.vim'
+" Plugin 'chriskempson/base16-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,9 +52,9 @@ filetype plugin indent on    " required
 
 " codedark, onedark, base16-default-dark are themes i like
 let base16colorspace=256 " Access colors present in 256 colorspace
-colorscheme base16-default-dark
-" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-highlight LineNr ctermfg=darkgrey ctermbg=NONE
+colorscheme default
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+" highlight LineNr ctermfg=darkgrey ctermbg=NONE
 
 
 " airline Begins--------
@@ -63,33 +65,22 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-" for no powerline arrows
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
-
-" unicode symbols
-" let g:airline_left_sep = '»'
-" let g:airline_left_sep = '▶'
-" let g:airline_right_sep = '«'
-" let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
-
-" airline symbols
-" let g:airline_left_sep = ''
 " let g:airline_left_alt_sep = ''
-" let g:airline_right_sep = ''
 " let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
 
-let g:airline_theme='base16_tomorrow'
+" use `:echo g:airline_symbols` to view entire symbols list
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+
+let g:airline_symbols.linenr = ' '
+let g:airline_symbols.maxlinenr = ' '
+let g:airline_symbols.colnr = ': '
+
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.whitespace = ' '
+
+let g:airline_theme='raven'
 
 " airline Ends----------
