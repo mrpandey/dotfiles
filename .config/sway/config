@@ -190,15 +190,23 @@ include /etc/sway/config-vars.d/*
     assign [title=".*Vivaldi"] 2
     assign [app_id="Thunar|Nautilus|Transmission-gtk|Eog|Shotwell"] 3
     assign [app_id="Sublime|Atom|Code|Postman|DBeaver|gedit"] 4
-    assign [app_id="Rhythmbox|mpv|vlc|zoom|youtube-music-desktop-app"] 5
+    assign [app_id="Rhythmbox|mpv|vlc|youtube-music-desktop-app"] 5
     assign [app_id="Atril|evince|libreoffice"] 6
     assign [class="PDF|pdf"] 6
     assign [app_id="notion"] 7
     assign [app_id="zoom|discord|TelegramDesktop"] 8
+    # when opening zoom in xwayland mode:$ env XDG_CURRENT_DESKTOP=GNOME /usr/bin/zoom
+    assign [class="zoom"] 8
     assign [app_id="blueman-manager|solaar"] 9
     
     # assign does not work for spotify
     for_window [class="Spotify"] move window to workspace 5
+
+#
+# Open these apps in floating window
+
+    for_window [app_id="calculator|zoom"] floating enable
+    for_window [class="zoom"] floating enable
 
 #
 # Layout stuff:
@@ -348,10 +356,5 @@ bindsym $mod+r mode "resize"
     # bindsym Mod4+Print exec swayshot display upload
     # bindsym Mod4+Mod1+Print exec swayshot window  upload
     # bindsym Mod4+Shift+Print exec swayshot region  upload
-
-#
-# Open these apps in floating window
-
-    for_window [app_id="calculator"] floating enable
 
 include /etc/sway/config.d/*
