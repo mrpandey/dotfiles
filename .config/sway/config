@@ -189,7 +189,7 @@ include /etc/sway/config-vars.d/*
     assign [app_id="firefox|Google-chrome|Brave-browser"] 2
     assign [title=".*Vivaldi"] 2
     assign [app_id="Thunar|Nautilus|Transmission-gtk|Eog|Shotwell"] 3
-    assign [app_id="Sublime|Atom|Code|Postman|DBeaver|gedit"] 4
+    assign [app_id="Sublime|Atom|code|Postman|DBeaver|gedit"] 4
     assign [app_id="Rhythmbox|mpv|vlc|youtube-music-desktop-app"] 5
     assign [app_id="Atril|evince|libreoffice"] 6
     assign [class="PDF|pdf"] 6
