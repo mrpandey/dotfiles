@@ -54,6 +54,7 @@ include /etc/sway/config-vars.d/*
     output $disp2 pos 1920 0 scale 1.5
     
     # default display outputs for workspaces with fallback to disp1
+    workspace 10 output $disp1
     workspace 1 output $disp2 $disp1
     workspace 2 output $disp2 $disp1
     workspace 3 output $disp2 $disp1
@@ -63,7 +64,6 @@ include /etc/sway/config-vars.d/*
     workspace 7 output $disp2 $disp1
     workspace 8 output $disp2 $disp1
     workspace 9 output $disp2 $disp1
-    workspace 10 output $disp1
     
     # background for display
     # output * bg #138808 solid_color
