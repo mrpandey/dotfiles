@@ -65,6 +65,9 @@ include /etc/sway/config-vars.d/*
     workspace 8 output $disp2 $disp1
     workspace 9 output $disp2 $disp1
     
+    # put focus on external monitor after logging in
+    exec sway focus output $disp2
+
     # background for display
     # output * bg #138808 solid_color
     output * bg `find $wallpapers_path -type f | shuf -n 1` fill
@@ -197,7 +200,7 @@ include /etc/sway/config-vars.d/*
     assign [app_id="zoom|discord|TelegramDesktop"] 8
     # when opening zoom in xwayland mode:$ env XDG_CURRENT_DESKTOP=GNOME /usr/bin/zoom
     assign [class="zoom"] 8
-    assign [app_id="blueman-manager|solaar"] 9
+    assign [app_id="pavucontrol|blueman-manager|solaar"] 9
     
     # assign does not work for spotify
     for_window [class="Spotify"] move window to workspace 5
@@ -318,7 +321,7 @@ bindsym $mod+r mode "resize"
 #
 # Media and other shortcuts
 
-    # volue controls
+    # volume controls
     bindsym --locked XF86AudioMute exec ~/.local/bin/pactl_volume.sh M
     bindsym --locked XF86AudioLowerVolume exec ~/.local/bin/pactl_volume.sh -5%
     bindsym --locked XF86AudioRaiseVolume exec ~/.local/bin/pactl_volume.sh +5%
@@ -345,16 +348,11 @@ bindsym $mod+r mode "resize"
 
     # PrtScn captures active display
     bindsym Print exec swayshot
-    
-    # Alt+Print captures focused window
-    bindsym Mod1+Print exec swayshot window
-    
-    # Select picture and save
-    bindsym Shift+Print exec swayshot region
-    
-    # Using with Super key uploads the image to x0.at
-    # bindsym Mod4+Print exec swayshot display upload
-    # bindsym Mod4+Mod1+Print exec swayshot window  upload
-    # bindsym Mod4+Shift+Print exec swayshot region  upload
+    # captures focused window
+    bindsym $mod+Print exec swayshot window
+    # capture region
+    bindsym $mod+Shift+Print exec swayshot region
 
+    # calculator
+    bindsym XF86Calculator exec gnome-calculator
 include /etc/sway/config.d/*
