@@ -13,7 +13,7 @@ then
 fi
 
 # nativefier will remove the directory notion-linux-x64 if it already exists
-nativefier --name notion --icon $this_script_dir/notion.png --background-color '#000000' https://www.notion.so/login $installation_dir
+nativefier --name notion --icon $this_script_dir/notion.png --background-color '#000000' --browserwindow-options '{ "webPreferences": { "spellcheck": false } }' https://www.notion.so/login $installation_dir
 rm -rf $installation_dir/notion
 mv $installation_dir/notion-linux-x64 $installation_dir/notion
 
