@@ -1,0 +1,10 @@
+# enable this service to run at startup: $ systemctl enable disable-lid.service
+
+[Unit]
+Description=Disable laptop lid switch
+  
+[Service]
+ExecStart=/usr/local/bin/disable_lid.sh
+
+[Install]
+WantedBy=multi-user.target
