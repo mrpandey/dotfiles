@@ -1,0 +1,9 @@
+# Taken from here: https://askubuntu.com/a/877801/568601
+
+# Microsoft Sculpt USB Receiver
+#ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="07a5", ATTR{power/wakeup}="disabled"
+ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="07a5" RUN+="/bin/sh -c 'echo disabled > /sys/bus/usb/devices/5-2/power/wakeup'"
+
+# Logitech MX Vertical USB Receiver
+#ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c52b", ATTR{power/wakeup}="disabled"
+ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c52b" RUN+="/bin/sh -c 'echo disabled > /sys/bus/usb/devices/3-2/power/wakeup'"
