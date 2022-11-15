@@ -49,6 +49,12 @@ include /etc/sway/config-vars.d/*
     set $disp1 "eDP-1"
     set $disp2 "DP-2"
 
+    # clamshell mode
+    # won't work when lid switch is disabled
+    bindswitch --reload --locked lid:on output $disp1 disable
+    bindswitch --reload --locked lid:off output $disp1 enable
+    exec_always ~/.local/bin/clamshell.sh
+
     # position outputs
     output $disp1 pos 0 360
     output $disp2 pos 1920 0 scale 1.5
@@ -66,7 +72,7 @@ include /etc/sway/config-vars.d/*
     workspace 9 output $disp2 $disp1
     
     # put focus on external monitor after logging in
-    exec sway focus output $disp2
+    exec swaymsg focus output $disp2
 
     # background for display
     # output * bg #138808 solid_color
@@ -142,7 +148,7 @@ include /etc/sway/config-vars.d/*
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
