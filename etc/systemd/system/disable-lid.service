@@ -1,4 +1,5 @@
 # enable this service to run at startup: $ systemctl enable disable-lid.service
+# better way: just disable lid switch from BIOS > Config > Power > Lid Switch
 
 [Unit]
 Description=Disable laptop lid switch
