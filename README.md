@@ -16,7 +16,7 @@ Configuration files of my Linux setup. Includes configs of following:
 
 \* not using these anymore
 
-<br/><br/>
+<br/>
 
 ![Sway Screenshot](https://i.imgur.com/iZn2J1u.png)
 Sway setup with [waybar](https://github.com/Alexays/Waybar), [foot](https://codeberg.org/dnkl/foot), [vim](https://github.com/vim/vim) ...<br><br>
