@@ -1,25 +1,36 @@
 # dotfiles
 
 Configuration files of my Linux setup. Includes configs of following:
-- i3-gaps
-- Zsh
-- Vim
-- Polybar
-- Rofi
-- Tilix
+- sway
+- waybar
+- yofi
+- bash
+- vim
+- foot
+- mako
+- i3-gaps *
+- Zsh *
+- Polybar *
+- Rofi *
+- Tilix *
 
-### Screenshots
+\* not using these anymore
 
-![Tilix](https://i.imgur.com/SKYNtx9.png)
-Tilix terminal with vim and random zsh themes.<br><br>
+<br/><br/>
 
-![i3-gaps with Tilix, Polybar, and Rofi](https://i.imgur.com/BlmPRBZ.png)
-[i3-gaps](https://github.com/Airblader/i3) with [Tilix](https://github.com/gnunn1/tilix), [Polybar](https://github.com/jaagr/polybar), and [Rofi](https://github.com/DaveDavenport/rofi).
+![Sway Screenshot](https://i.imgur.com/iZn2J1u.png)
+Sway setup with [waybar](https://github.com/Alexays/Waybar), [foot](https://codeberg.org/dnkl/foot), [vim](https://github.com/vim/vim) ...<br><br>
 
-### List of packages to install after fresh system install
+![Sway Screenshot](https://i.imgur.com/nzkXyyu.png)
+... and [yofi](https://github.com/l4l/yofi) launcher
 
-`git` `vim` `tilix` `mpv` `curl` `zsh` `powerline` `fonts-powerline` `oh-my-zsh` `i3-gaps` `rofi` `polybar` `i3-lock` `arandr` `autorandr` `nnn` 
-`vscode` `pinta` `qpdfview` `pavucontrol` `solaar` `i3-gnome-pomodoro` `logiops` `playerctl` `vivaldi-stable`
+### Packages to install
+
+Must: `build-essential` `wl-clipboard` `waybar` `yofi` `git` `swaylock` `swayshot` `vim` `Vundle.vim` `brillo` `blueman` `mako-notifier` `openpomodoro-cli` `notion (setup-scripts)` `mpv` `vscode` `vivaldi-stable` `pavucontrol` `ncal` `tree` `spotify` `radeontop`
+
+Extras: `nnn` `pinta` `logiops` `solaar` `master-pdf-editor`
+
+Extra step to make `mako` work: `sudo aa-disable /etc/apparmor.d/fr.emersion.Mako`. This needs `apparmor-utils` to be installed.
 
 ### License
 Licensed under [MIT](https://github.com/mrpandey/dotfiles/blob/master/LICENSE).
