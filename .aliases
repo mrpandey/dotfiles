@@ -8,3 +8,5 @@ alias wlp=wl-paste
 alias wlclr='wlc --clear'
 
 alias python=python3
+
+alias clapper="(flatpak run com.github.rafostar.Clapper &) >/dev/null 2>&1"

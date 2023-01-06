@@ -199,7 +199,7 @@ include /etc/sway/config-vars.d/*
     assign [title=".*Vivaldi"] 2
     assign [app_id="Thunar|Nautilus|Transmission-gtk|Eog|Shotwell"] 3
     assign [app_id="Sublime|Atom|code|Postman|DBeaver|gedit"] 4
-    assign [app_id="Rhythmbox|mpv|vlc|youtube-music-desktop-app"] 5
+    assign [app_id="Rhythmbox|mpv|vlc|Clapper|youtube-music-desktop-app"] 5
     assign [app_id="Atril|evince|libreoffice"] 6
     assign [class="PDF|pdf"] 6
     assign [app_id="notion"] 7
@@ -342,7 +342,7 @@ bindsym $mod+r mode "resize"
     
     # pomodoro timer
     # using this one: https://github.com/open-pomodoro/openpomodoro-cli
-    bindsym $mod+period exec ~/.local/bin/pomodoro start -d 20
+    bindsym $mod+period exec ~/.local/bin/pomodoro start -d 25
     bindsym $mod+comma exec ~/.local/bin/pomodoro cancel
     
     # screen lock and suspend
