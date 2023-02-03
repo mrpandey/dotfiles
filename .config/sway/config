@@ -206,7 +206,7 @@ include /etc/sway/config-vars.d/*
     assign [app_id="notion"] 7
     assign [app_id="zoom|discord|TelegramDesktop"] 8
     # when opening zoom in xwayland mode:$ env XDG_CURRENT_DESKTOP=GNOME /usr/bin/zoom
-    assign [class="zoom"] 8
+    assign [class="zoom|dicord"] 8
     assign [app_id="pavucontrol|blueman-manager|solaar"] 9
     
     # assign does not work for spotify
