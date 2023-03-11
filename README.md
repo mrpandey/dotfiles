@@ -30,7 +30,5 @@ Must: `build-essential` `wl-clipboard` `waybar` `yofi` `git` `swaylock` `swaysho
 
 Extras: `nnn` `pinta` `logiops` `solaar` `master-pdf-editor`
 
-Extra step to make `mako` work: `sudo aa-disable /etc/apparmor.d/fr.emersion.Mako`. This needs `apparmor-utils` to be installed.
-
 ### License
 Licensed under [MIT](https://github.com/mrpandey/dotfiles/blob/master/LICENSE).
