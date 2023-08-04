@@ -5,6 +5,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set whichwrap+=<,>,h,l
+set guifont=InconsolataGo\ Nerd\ Font:h10
 
 syntax on
 

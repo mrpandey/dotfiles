@@ -135,7 +135,7 @@ include /etc/sway/config-vars.d/*
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+space exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -224,7 +224,7 @@ include /etc/sway/config-vars.d/*
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
+    bindsym $mod+h splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
@@ -239,7 +239,7 @@ include /etc/sway/config-vars.d/*
     bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    bindsym $mod+t focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
@@ -340,7 +340,13 @@ bindsym $mod+r mode "resize"
     # increment/decrement brightness in exponential percentage
     bindsym --locked XF86MonBrightnessDown exec brillo -q -U 1
     bindsym --locked XF86MonBrightnessUp exec brillo -q -A 1
-    
+
+    bindsym $mod+Control+Minus exec busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100
+    bindsym $mod+Control+Equal exec busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100
+
+    bindsym $mod+Control+bracketleft exec busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateGamma d -0.05
+    bindsym $mod+Control+bracketright exec busctl --user call rs.wl-gammarelay / rs.wl.gammarelay UpdateGamma d 0.05
+
     # pomodoro timer
     # using this one: https://github.com/open-pomodoro/openpomodoro-cli
     bindsym $mod+period exec ~/.local/bin/pomodoro start -d 25
