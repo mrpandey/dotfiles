@@ -116,8 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="/home/avinash/.local/bin:$PATH"
-. "$HOME/.cargo/env"
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

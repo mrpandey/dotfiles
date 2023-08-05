@@ -123,6 +123,7 @@ include /etc/sway/config-vars.d/*
 
 ### Autostart Programs
     exec mako
+    exec wl-gammarelay-rs
 
 ### Key bindings
 #
