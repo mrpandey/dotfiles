@@ -3,7 +3,7 @@
     "position": "bottom",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/pomodoro"],
-    "modules-right": ["network", "pulseaudio", "keyboard-state", "cpu", "memory", "battery", "clock", "tray"],
+    "modules-right": ["network", "custom/gr-color-temp", "custom/gr-brightness", "custom/gr-gamma", "pulseaudio", "keyboard-state", "cpu", "memory", "battery", "clock", "tray"],
     "sway/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
@@ -37,6 +37,24 @@
         "tooltip-format-disconnected": " Disconnected",
         // "max-length": 50,
         "format-icons": ["直", ""]
+    },
+    "custom/gr-color-temp": {
+        "format": "{} 𝝟",
+        "exec": "wl-gammarelay-rs watch {t}",
+        "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100",
+        "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100"
+    },
+    "custom/gr-brightness": {
+        "format": "🔅 {}%",
+        "exec": "wl-gammarelay-rs watch {bp}",
+        "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d +0.02",
+        "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d -0.02"
+    },
+    "custom/gr-gamma": {
+        "format": "𝛄 {}",
+        "exec": "wl-gammarelay-rs watch {g}",
+        "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateGamma d +0.02",
+        "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateGamma d -0.02"
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
