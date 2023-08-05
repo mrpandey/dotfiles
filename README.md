@@ -30,5 +30,9 @@ Must: `build-essential` `wl-clipboard` `waybar` `yofi` `git` `swaylock` `swaysho
 
 Extras: `nnn` `pinta` `logiops` `solaar` `master-pdf-editor`
 
+### Troubleshooting
+
+- [Spotify snap on HiDPI display](https://wiki.archlinux.org/title/spotify#HiDPI_Mode)
+
 ### License
 Licensed under [MIT](https://github.com/mrpandey/dotfiles/blob/master/LICENSE).
