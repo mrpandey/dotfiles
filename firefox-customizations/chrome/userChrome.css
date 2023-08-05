@@ -6,6 +6,11 @@
     visibility: collapse;
   }
 
+  /*Set font size for entire navigation bar, including url bar and its drop-down.*/
+  #nav-bar {
+    font-size: 13px;
+  }
+
   /* hide navigation bar when it is not focused; use Ctrl+L to get focus 
   #main-window:not([customizing]) #navigator-toolbox:not(:focus-within):not(:hover) {
     margin-top: -45px;
@@ -19,6 +24,12 @@
   /* hide the "Tree Style Tab" header at the top of the sidebar (only Tree Style Tab sidebar) */
   #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
     display: none;
+  }
+
+  /*Reduce footprint of sideberry header.*/
+  #sidebar-header {
+    font-size: 1em !important;
+    padding: 4px 8px !important;
   }
 
 }
