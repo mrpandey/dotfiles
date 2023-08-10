@@ -196,8 +196,7 @@ include /etc/sway/config-vars.d/*
     # assign application to workspaces
 
     #assign [app_id="Tilix|terminal|foot"] 1
-    assign [app_id="firefox|Google-chrome|Brave-browser"] 2
-    assign [title=".*Vivaldi"] 2
+    assign [app_id="firefox|vivaldi|Google-chrome|Brave-browser"] 2
     assign [app_id="Thunar|Nautilus|Transmission-gtk|Eog|Shotwell"] 3
     assign [app_id="code|gedit"] 4
     assign [class="Sublime|Atom|Postman|DBeaver"] 4
