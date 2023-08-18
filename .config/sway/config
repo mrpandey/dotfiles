@@ -47,7 +47,7 @@ include /etc/sway/config-vars.d/*
 
     # define display output names
     set $disp1 "eDP-1"
-    set $disp2 "DP-2"
+    set $disp2 "HDMI-A-1"
 
     # clamshell mode
     # won't work when lid switch is disabled
@@ -320,10 +320,10 @@ bindsym $mod+r mode "resize"
     titlebar_border_thickness 0
     titlebar_padding 30 1
 
-    # border, background, text color of title bar
-    client.focused #000000 #000000 #eeeeee #ffa700
-    client.unfocused #eeeeee #666666 #eeeeee #ffa700
-    client.focused_inactive #eeeeee #666666 #eeeeee #ffa700
+    # color of border, background, text, and indicator in title bar
+    client.focused #000000 #444444 #eeeeee #ffa700
+    client.unfocused #eeeeee #000a0a #eeeeee #ffa700
+    client.focused_inactive #eeeeee #000a0a #eeeeee #ffa700
 
 #
 # Media and other shortcuts
