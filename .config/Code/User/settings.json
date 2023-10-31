@@ -1,5 +1,4 @@
 {
-    "workbench.colorTheme": "One Dark Pro Monokai Darker",
     "editor.fontFamily": "'JetBrains Mono', 'InconsolataGo Nerd Font', 'UbuntuMono Nerd Font', 'Ubuntu Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.wordWrap": "on",
     "[html]": {
@@ -16,13 +15,8 @@
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "emojisense.languages": {
-        "markdown": true,
-        "plaintext": {
-            "markupCompletionsEnabled": false,
-            "emojiDecoratorsEnabled": false
-        },
-        "scminput": true,
-        "git-commit": true
-    }
+    "window.titleBar.enabled": false,
+    "update.mode": "manual",
+    "window.menuBarVisibility": "toggle",
+    "editor.fontSize": 15
 }

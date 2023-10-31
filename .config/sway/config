@@ -125,6 +125,11 @@ include /etc/sway/config-vars.d/*
     exec mako
     exec wl-gammarelay-rs
 
+## Set color temp and gamma
+
+    exec busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Gamma d 1.14
+    exec busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6000
+
 ### Key bindings
 #
 # Basics:
@@ -199,7 +204,7 @@ include /etc/sway/config-vars.d/*
     assign [app_id="firefox|vivaldi|Google-chrome|Brave-browser"] 2
     assign [app_id="Thunar|Nautilus|Transmission-gtk|Eog|Shotwell"] 3
     assign [app_id="code|gedit"] 4
-    assign [class="Sublime|Atom|Postman|DBeaver"] 4
+    assign [class="Code|Sublime|Atom|Postman|DBeaver"] 4
     assign [app_id="Rhythmbox|mpv|vlc|Clapper|youtube-music-desktop-app"] 5
     assign [app_id="Atril|evince|libreoffice"] 6
     assign [class="PDF|pdf"] 6
@@ -235,7 +240,7 @@ include /etc/sway/config-vars.d/*
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
 
-    # Toggle the current focus between tiling and floating mode
+    # Toggle floating mode of current focused window
     bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
@@ -246,8 +251,13 @@ include /etc/sway/config-vars.d/*
 
     # Default workspace layout
     workspace_layout tabbed
+
     # default container layout for ws1
     for_window [workspace=1] layout splith
+
+    # default container layout for ws9
+    for_window [workspace=9] layout splith
+
 #
 # Scratchpad:
 #
