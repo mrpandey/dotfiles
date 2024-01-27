@@ -117,8 +117,8 @@ include /etc/sway/config-vars.d/*
         dwt enabled
         tap enabled
         natural_scroll disabled
+        pointer_accel 0.4
         middle_emulation enabled
-        
     }
 
 ### Autostart Programs
