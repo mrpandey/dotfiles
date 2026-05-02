@@ -47,7 +47,8 @@ include /etc/sway/config-vars.d/*
 
     # define display output names
     set $disp1 "eDP-1"
-    set $disp2 "HDMI-A-1"
+    set $disp2 "DP-4"
+    set $disp3 "DP-5"
 
     # clamshell mode
     # won't work when lid switch is disabled
@@ -55,10 +56,20 @@ include /etc/sway/config-vars.d/*
     bindswitch --reload --locked lid:off output $disp1 enable
     exec_always ~/.local/bin/clamshell.sh
 
-    # position outputs
-    output $disp1 pos 0 360
-    output $disp2 pos 1920 0 scale 1.5
-    
+    # set position and scale of displays
+
+    # puts FHD disp1 on left side of disp2 so that their top edges align
+    # for disp2, use scale 1.5 if it is UHD and 1 otherwise (FHD/QHD)
+    #output $disp1 pos 0 0
+    #output $disp2 pos 1920 0 scale 1.5
+
+    # puts FHD disp1 below QHD/UHD disp2 so that their left edges align
+    # puts QHD/UHD disp3 to the right of disp2 so that their top edges align
+    # for disp2/disp3, use scale 1 if it is QHD and 1.5 if it is UHD
+    output $disp1 pos 0 1440 scale 1.25
+    output $disp2 pos 0 0 scale 1.5
+    output $disp3 pos 2560 0 scale 1.5
+
     # default display outputs for workspaces with fallback to disp1
     workspace 10 output $disp1
     workspace 1 output $disp2 $disp1
@@ -119,6 +130,12 @@ include /etc/sway/config-vars.d/*
         natural_scroll disabled
         pointer_accel 0.4
         middle_emulation enabled
+    }
+
+    input "type:pointer" {
+        natural_scroll disabled
+        accel_profile "adaptive"
+        pointer_accel -0.2
     }
 
 ### Autostart Programs
@@ -201,17 +218,17 @@ include /etc/sway/config-vars.d/*
     # assign application to workspaces
 
     #assign [app_id="Tilix|terminal|foot"] 1
-    assign [app_id="firefox|vivaldi|Google-chrome|Brave-browser"] 2
+    assign [app_id="firefox|vivaldi|google-chrome|Brave-browser"] 2
     assign [app_id="Thunar|Nautilus|Transmission-gtk|Eog|Shotwell"] 3
     assign [app_id="code|gedit"] 4
-    assign [class="Code|Sublime|Atom|Postman|DBeaver"] 4
-    assign [app_id="Rhythmbox|mpv|vlc|Clapper|youtube-music-desktop-app"] 5
+    assign [class="Code|Sublime|Atom|Postman|bruno|DBeaver"] 4
+    assign [app_id="spotify|Rhythmbox|mpv|vlc|Clapper|youtube-music-desktop-app"] 5
     assign [app_id="Atril|evince|libreoffice"] 6
     assign [class="PDF|pdf"] 6
     assign [app_id="notion"] 7
     assign [app_id="zoom|discord|TelegramDesktop"] 8
     # when opening zoom in xwayland mode:$ env XDG_CURRENT_DESKTOP=GNOME /usr/bin/zoom
-    assign [class="zoom|dicord"] 8
+    assign [class="zoom|discord"] 8
     assign [app_id="pavucontrol|blueman-manager|solaar"] 9
     
     # assign does not work for spotify

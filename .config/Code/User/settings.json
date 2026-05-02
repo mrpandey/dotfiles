@@ -15,8 +15,45 @@
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
     "terminal.integrated.enableMultiLinePasteWarning": false,
+    "emojisense.languages": {
+        "markdown": true,
+        "plaintext": {
+            "markupCompletionsEnabled": false,
+            "emojiDecoratorsEnabled": false
+        },
+        "scminput": true,
+        "git-commit": true
+    },
     "window.titleBar.enabled": false,
     "update.mode": "manual",
     "window.menuBarVisibility": "toggle",
-    "editor.fontSize": 15
+    "jupyter.interactiveWindow.codeLens.enable": false,
+    "github.gitAuthentication": false,
+    "codeium.enableConfig": {
+        "*": true,
+        "*.go": false,
+        "go": false
+    },
+    "editor.inlayHints.enabled": "off",
+    "debug.allowBreakpointsEverywhere": true,
+    "svelte.enable-ts-plugin": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.fontSize": 16,
+    "chat.instructionsFilesLocations": {
+        ".github/instructions": true,
+        "/tmp/postman-collections-post-response.instructions.md": true,
+        "/tmp/postman-collections-pre-request.instructions.md": true,
+        "/tmp/postman-folder-post-response.instructions.md": true,
+        "/tmp/postman-folder-pre-request.instructions.md": true,
+        "/tmp/postman-http-request-post-response.instructions.md": true,
+        "/tmp/postman-http-request-pre-request.instructions.md": true
+    },
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "terminal.integrated.showLinkHover": false,
+    "terminal.integrated.stickyScroll.enabled": false
 }

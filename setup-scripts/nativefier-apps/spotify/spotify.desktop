@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Spotify
+Exec=/bin/sh -c "$HOME/.local/share/spotify/spotify --enable-features=UseOzonePlatform --ozone-platform=wayland %U"
+GenericName=Music Player
+Icon=spotify
+Terminal=false
+Categories=Audio;Music;Player;AudioVideo;
+StartupWMClass=spotify
