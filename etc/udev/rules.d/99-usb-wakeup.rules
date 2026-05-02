@@ -1,0 +1,8 @@
+# Taken from here: https://wiki.archlinux.org/title/Power_management/Wakeup_triggers#Event-driven_with_udev
+# To see attributes: $ udevadm info -a /sys/bus/usb/devices/device-dir/
+
+# Microsoft Sculpt USB Receiver
+ACTION=="add", SUBSYSTEM=="usb", DRIVER=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="07a5", ATTR{power/wakeup}:="disabled"
+
+# Logitech MX Vertical USB Receiver
+ACTION=="add", SUBSYSTEM=="usb", DRIVER=="usb", ATTR{idVendor}=="046d", ATTR{idProduct}=="c52b", ATTR{power/wakeup}:="disabled"
