@@ -8,6 +8,24 @@ case $- in
       *) return;;
 esac
 
+# Safely source .profile without looping (it also sources .bashrc)
+if [ -z "$_LOADING_PROFILE" ]; then
+    if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+        if [ -f "$HOME/.profile" ]; then
+            _LOADING_PROFILE=1  # Turn on the circuit breaker
+            . "$HOME/.profile"
+            unset _LOADING_PROFILE # Turn it off when completely done
+        fi
+    fi
+fi
+
+# prepend to PATH if directory exists and not already in PATH
+prepend_to_path() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="$1:$PATH"
+    fi
+}
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -87,15 +105,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -119,3 +128,9 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+prepend_to_path "$BUN_INSTALL/bin"
+
+export PATH

@@ -1,6 +1,11 @@
-# Alias for Notion if installed through nativefier.
-# Note: 'notion' is an irrelevant package in Ubuntu repos. But never gonna use it, so this alias name is ok.
-alias notion="($HOME/.local/share/notion/notion --enable-features=UseOzonePlatform --ozone-platform=wayland &) >/dev/null 2>&1"
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Note: wlc is an irrelevant package in Ubuntu repos. But, probably won't ever use it.
 alias wlc=wl-copy
@@ -10,3 +15,7 @@ alias wlclr='wlc --clear'
 alias python=python3
 
 alias clapper="(flatpak run com.github.rafostar.Clapper &) >/dev/null 2>&1"
+
+# Alias for Notion if installed through nativefier.
+# Note: 'notion' is an irrelevant package in Ubuntu repos. But never gonna use it, so this alias name is ok.
+#alias notion="($HOME/.local/share/notion/notion --enable-features=UseOzonePlatform --ozone-platform=wayland &) >/dev/null 2>&1"

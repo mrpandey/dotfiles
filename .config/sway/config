@@ -15,7 +15,7 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu ~/.local/bin/yofi-ubuntu-20.04 | xargs swaymsg exec --
+set $menu ~/.local/bin/yofi-ubuntu-22.04 | xargs swaymsg exec --
 
 # wallpapers directory
 set $wallpapers_path $HOME/Pictures/wallpapers/minimal
@@ -28,9 +28,13 @@ exec_always {
     gsettings set $gnome-schema gtk-theme 'Yaru-dark'
     gsettings set $gnome-schema icon-theme 'Yaru-dark'
     gsettings set $gnome-schema color-scheme prefer-dark
-    gsettings set $gnome-schema cursor-theme 'Yaru'
+    gsettings set $gnome-schema cursor-theme 'Yaru' 20
     gsettings set $gnome-schema font-name 'Ubuntu 12'
 }
+
+# set xcursor theme for consistency
+# resolves the bug where cursor disappears on resizing sidebar in certain apps
+seat seat0 xcursor_theme Yaru 20
 
 include /etc/sway/config-vars.d/*
 
@@ -47,7 +51,7 @@ include /etc/sway/config-vars.d/*
 
     # define display output names
     set $disp1 "eDP-1"
-    set $disp2 "DP-4"
+    set $disp2 "DP-3"
     set $disp3 "DP-5"
 
     # clamshell mode
@@ -81,14 +85,14 @@ include /etc/sway/config-vars.d/*
     workspace 7 output $disp2 $disp1
     workspace 8 output $disp2 $disp1
     workspace 9 output $disp2 $disp1
-    
+
     # put focus on external monitor after logging in
     exec swaymsg focus output $disp2
 
     # background for display
     # output * bg #138808 solid_color
     output * bg `find $wallpapers_path -type f | shuf -n 1` fill
-    
+
     # shortcuts for moving workspaces to different display outputs
     bindsym $mod+i move workspace to output up
     bindsym $mod+k move workspace to output down
@@ -123,7 +127,7 @@ include /etc/sway/config-vars.d/*
 # Read `man 5 sway-input` for more information about this section.
 
     input * xkb_numlock enabled
-    
+
     input "2:7:SynPS/2_Synaptics_TouchPad" {
         dwt enabled
         tap enabled
@@ -220,24 +224,24 @@ include /etc/sway/config-vars.d/*
     #assign [app_id="Tilix|terminal|foot"] 1
     assign [app_id="firefox|vivaldi|google-chrome|Brave-browser"] 2
     assign [app_id="Thunar|Nautilus|Transmission-gtk|Eog|Shotwell"] 3
-    assign [app_id="code|gedit"] 4
+    assign [app_id="code|gedit|dev.zed"] 4
     assign [class="Code|Sublime|Atom|Postman|bruno|DBeaver"] 4
     assign [app_id="spotify|Rhythmbox|mpv|vlc|Clapper|youtube-music-desktop-app"] 5
     assign [app_id="Atril|evince|libreoffice"] 6
     assign [class="PDF|pdf"] 6
-    assign [app_id="notion"] 7
+    assign [app_id="notion|anytype"] 7
     assign [app_id="zoom|discord|TelegramDesktop"] 8
     # when opening zoom in xwayland mode:$ env XDG_CURRENT_DESKTOP=GNOME /usr/bin/zoom
     assign [class="zoom|discord"] 8
     assign [app_id="pavucontrol|blueman-manager|solaar"] 9
-    
+
     # assign does not work for spotify
     for_window [class="Spotify"] move window to workspace 5
 
 #
 # Open these apps in floating window
 
-    for_window [app_id="calculator|zoom"] floating enable
+    for_window [app_id="Calculator|calculator|zoom"] floating enable
     for_window [class="zoom"] floating enable
 
 #
@@ -363,7 +367,7 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86AudioPlay exec "playerctl --player=spotify play-pause"
     bindsym --locked XF86AudioPrev exec "playerctl --player=spotify previous"
     bindsym --locked XF86AudioNext exec "playerctl --player=spotify next"
-    
+
     # increment/decrement brightness in exponential percentage
     bindsym --locked XF86MonBrightnessDown exec brillo -q -U 1
     bindsym --locked XF86MonBrightnessUp exec brillo -q -A 1
@@ -378,7 +382,7 @@ bindsym $mod+r mode "resize"
     # using this one: https://github.com/open-pomodoro/openpomodoro-cli
     bindsym $mod+period exec ~/.local/bin/pomodoro start -d 25
     bindsym $mod+comma exec ~/.local/bin/pomodoro cancel
-    
+
     # screen lock and suspend
     bindsym $mod+Shift+l exec swaylock -i `find $locked_wallpapers_path -type f | shuf -n 1`
     bindsym $mod+Shift+s exec swaylock -f -i `find $locked_wallpapers_path -type f | shuf -n 1` && systemctl suspend
