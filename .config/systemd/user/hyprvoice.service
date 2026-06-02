@@ -1,0 +1,15 @@
+[Unit]
+Description=Hyprvoice - Voice-Powered Typing for Wayland/Hyprland
+After=pipewire.service ydotoold.service
+Wants=ydotoold.service
+BindsTo=pipewire.service
+
+[Service]
+Type=simple
+Environment="PATH=/home/avinash/.local/bin:/usr/local/bin:/usr/bin:/bin"
+ExecStart=/home/avinash/.local/bin/hyprvoice serve
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+

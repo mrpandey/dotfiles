@@ -26,9 +26,9 @@ Sway setup with [waybar](https://github.com/Alexays/Waybar), [foot](https://code
 
 ### Packages to install
 
-Must: `build-essential` `wl-clipboard` `waybar` `yofi` `git` `swaylock` `swayshot` `vim` `Vundle.vim` `brillo` `blueman` `mako-notifier` `openpomodoro-cli` `mpv`/`clapper` `zed` `vivaldi-stable` `pavucontrol` `ncal` `tree` `radeontop` `wl-gammarelay-rs` `ly` `keyd`
+Must: `build-essential` `wl-clipboard` `waybar` `yofi` `git` `swaylock` `swayshot` `vim` `Vundle.vim` `brillo` `blueman` `mako-notifier` `openpomodoro-cli` `mpv`/`clapper` `zed` `vivaldi-stable` `pavucontrol` `ncal` `tree` `radeontop` `wl-gammarelay-rs` `ly` `keyd` `hyprvoice`
 
-Extras: `nnn` `ncdu` `duf` `pinta` `logiops` `solaar` `master-pdf-editor` `spotify`
+Extras: `nnn` `ncdu` `duf` `pinta` `logiops` `solaar` `master-pdf-editor` `spotify` `notion/anytype`
 
 ### Troubleshooting
 

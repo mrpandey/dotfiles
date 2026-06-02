@@ -383,6 +383,9 @@ bindsym $mod+r mode "resize"
     bindsym $mod+period exec ~/.local/bin/pomodoro start -d 25
     bindsym $mod+comma exec ~/.local/bin/pomodoro cancel
 
+    # start/stop voice recording for speech-to-text
+    bindsym $mod+m exec ~/.local/bin/hyprvoice toggle
+
     # screen lock and suspend
     bindsym $mod+Shift+l exec swaylock -i `find $locked_wallpapers_path -type f | shuf -n 1`
     bindsym $mod+Shift+s exec swaylock -f -i `find $locked_wallpapers_path -type f | shuf -n 1` && systemctl suspend
